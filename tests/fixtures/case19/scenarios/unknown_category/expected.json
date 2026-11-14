@@ -1,0 +1,94 @@
+{
+  "description": "Накладная МАТ-88 (45 000,00) could be materials or production overhead. Its category stays unresolved with both possible categories, so neither column can be verified, and materials is no longer verified at 0.00 (V06).",
+  "validation": [
+    "V06"
+  ],
+  "inputs": {
+    "add": [
+      "16_Материалы_88.docx"
+    ]
+  },
+  "expected_extraction": {
+    "allocations": [
+      {
+        "category": {
+          "state": "unresolved",
+          "value": null
+        },
+        "amount": "45000.00",
+        "possible_categories": [
+          "materials",
+          "production_overhead"
+        ]
+      }
+    ]
+  },
+  "typed": "plus mat88 with one 45000.00 line, category unresolved, possible materials/production_overhead",
+  "expected": {
+    "status_counts": {
+      "verified": 4,
+      "discrepancy": 0,
+      "insufficient_evidence": 11
+    },
+    "indicators": {
+      "col4": {
+        "status": "insufficient_evidence",
+        "problem": "unresolved_interpretation",
+        "coverage": "none",
+        "observed_sum": null,
+        "expected_value": null,
+        "diff": null
+      },
+      "col15": {
+        "status": "insufficient_evidence",
+        "problem": "unresolved_interpretation",
+        "coverage": "partial",
+        "observed_sum": "1133298.10",
+        "expected_value": null,
+        "diff": null
+      },
+      "col17": {
+        "status": "insufficient_evidence",
+        "problem": "unresolved_interpretation",
+        "coverage": "partial",
+        "observed_sum": "11567877.40",
+        "expected_value": null,
+        "diff": null
+      }
+    },
+    "exclusions": [
+      {
+        "fixture": "adm27copy",
+        "reason": "duplicate",
+        "duplicate_of": "adm27"
+      },
+      {
+        "fixture": "org0603",
+        "reason": "outside_period"
+      },
+      {
+        "fixture": "adm75",
+        "reason": "other_contract"
+      }
+    ],
+    "unresolved": [
+      {
+        "fixture": "mat88",
+        "possible_categories": [
+          "materials",
+          "production_overhead"
+        ]
+      }
+    ],
+    "conclusion": {
+      "component_discrepancies": [],
+      "grand_total": {
+        "entry_id": "col17",
+        "status": "insufficient_evidence",
+        "diff": null,
+        "explained_by": [],
+        "unexplained_diff": null
+      }
+    }
+  }
+}

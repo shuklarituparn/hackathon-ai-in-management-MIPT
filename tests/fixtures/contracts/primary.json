@@ -1,0 +1,148 @@
+{
+  "kind": "primary",
+  "version_id": "ver_sa174_v1",
+  "doc_type": {
+    "state": "accepted",
+    "value": "Счет-акт",
+    "source_text": "СЧЕТ-АКТ",
+    "evidence_ids": [
+      "blk_sa174_number"
+    ],
+    "basis": "observed",
+    "findings": [],
+    "reason": null
+  },
+  "number": {
+    "state": "accepted",
+    "value": "174",
+    "source_text": "№ 174",
+    "evidence_ids": [
+      "blk_sa174_number"
+    ],
+    "basis": "observed",
+    "findings": [],
+    "reason": null
+  },
+  "contracts": {
+    "state": "accepted",
+    "value": [
+      "24/03/15-01"
+    ],
+    "source_text": "Договор 24/03/15-01",
+    "evidence_ids": [
+      "blk_sa174_contract"
+    ],
+    "basis": "observed",
+    "findings": [],
+    "reason": null
+  },
+  "counterparty": {
+    "state": "accepted",
+    "value": "ООО «ИнжКонтур Бета»",
+    "source_text": "ООО «ИнжКонтур Бета»",
+    "evidence_ids": [
+      "blk_sa174_vendor"
+    ],
+    "basis": "observed",
+    "findings": [],
+    "reason": null
+  },
+  "issue_date": {
+    "state": "accepted",
+    "value": "2026-02-25",
+    "source_text": "25.02.2026",
+    "evidence_ids": [
+      "blk_sa174_date"
+    ],
+    "basis": "observed",
+    "findings": [],
+    "reason": null
+  },
+  "service_period": {
+    "state": "accepted",
+    "value": {
+      "start": "2026-02-25",
+      "end": "2026-02-25"
+    },
+    "source_text": null,
+    "evidence_ids": [
+      "blk_sa174_date"
+    ],
+    "basis": "inferred",
+    "findings": [
+      {
+        "code": "period_from_issue_date",
+        "message": "No explicit service period; the issue-date rule applies.",
+        "evidence_ids": [
+          "blk_sa174_date"
+        ],
+        "version_ids": []
+      }
+    ],
+    "reason": null
+  },
+  "amount": {
+    "state": "accepted",
+    "value": "318298.10",
+    "source_text": "318 298,10",
+    "evidence_ids": [
+      "blk_sa174_amount"
+    ],
+    "basis": "observed",
+    "findings": [],
+    "reason": null
+  },
+  "currency": {
+    "state": "accepted",
+    "value": "RUB",
+    "source_text": "руб.",
+    "evidence_ids": [
+      "blk_sa174_amount"
+    ],
+    "basis": "observed",
+    "findings": [],
+    "reason": null
+  },
+  "unit": {
+    "state": "accepted",
+    "value": "руб.",
+    "source_text": "руб.",
+    "evidence_ids": [
+      "blk_sa174_amount"
+    ],
+    "basis": "observed",
+    "findings": [],
+    "reason": null
+  },
+  "allocations": [
+    {
+      "line_label": null,
+      "category": {
+        "state": "accepted",
+        "value": "production_overhead",
+        "source_text": null,
+        "evidence_ids": [
+          "blk_sa174_desc",
+          "blk_sa174_purpose"
+        ],
+        "basis": "inferred",
+        "findings": [],
+        "reason": null
+      },
+      "possible_categories": [],
+      "amount": {
+        "state": "accepted",
+        "value": "318298.10",
+        "source_text": "318 298,10",
+        "evidence_ids": [
+          "blk_sa174_amount"
+        ],
+        "basis": "observed",
+        "findings": [],
+        "reason": null
+      }
+    }
+  ],
+  "possible_categories": [],
+  "conflicts": []
+}

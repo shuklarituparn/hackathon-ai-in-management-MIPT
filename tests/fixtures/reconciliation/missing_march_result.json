@@ -1,0 +1,1443 @@
+{
+  "scope": {
+    "contract": "24/03/15-01",
+    "report_row": "3 этап, 2026 г.",
+    "date_from": "2026-01-01",
+    "date_to": "2026-05-31",
+    "coverage_basis": "supplied_bundle",
+    "confirmed": true
+  },
+  "tolerance": "0.01",
+  "indicators": [
+    {
+      "entry_id": "col3",
+      "column": 3,
+      "label": "Трудоемкость (человеко-месяц)",
+      "unit": "чел.-мес.",
+      "category": "workforce_intensity",
+      "reported_value": "34.14",
+      "reported_evidence_ids": [
+        "blk_kfz_col3"
+      ],
+      "observed_sum": null,
+      "expected_value": null,
+      "diff": null,
+      "coverage": "none",
+      "status": "insufficient_evidence",
+      "problem": "no_supporting_document",
+      "contributions": [],
+      "exclusions": [],
+      "gaps": [
+        {
+          "code": "no_documents",
+          "message": "В наборе нет документов по этой статье.",
+          "evidence_ids": [],
+          "version_ids": []
+        }
+      ],
+      "explanation": "Недостаточно данных: нет отдельного подтверждающего документа."
+    },
+    {
+      "entry_id": "col4",
+      "column": 4,
+      "label": "Материальные затраты",
+      "unit": "руб.",
+      "category": "materials",
+      "reported_value": "0.00",
+      "reported_evidence_ids": [
+        "blk_kfz_col4"
+      ],
+      "observed_sum": "0.00",
+      "expected_value": "0.00",
+      "diff": "0.00",
+      "coverage": "complete",
+      "status": "verified",
+      "problem": null,
+      "contributions": [],
+      "exclusions": [],
+      "gaps": [],
+      "explanation": "В закрытом наборе нет принятых или неразрешенных расходов этой статьи; нулевое значение подтверждено."
+    },
+    {
+      "entry_id": "col5",
+      "column": 5,
+      "label": "Затраты на оплату труда — всего (0200)",
+      "unit": "руб.",
+      "category": "payroll_total",
+      "reported_value": "5558474.83",
+      "reported_evidence_ids": [
+        "blk_kfz_col5"
+      ],
+      "observed_sum": "4456674.83",
+      "expected_value": null,
+      "diff": null,
+      "coverage": "partial",
+      "status": "insufficient_evidence",
+      "problem": "missing_coverage",
+      "contributions": [
+        {
+          "version_id": "ver_pay01",
+          "label": "Расчетная ведомость № ВЕД-ЗП-2026-01 — 0201 Основная заработная плата",
+          "amount": "1010000.00",
+          "category": "payroll_main",
+          "evidence_ids": [
+            "blk_pay01_line0",
+            "blk_pay01_cat0"
+          ]
+        },
+        {
+          "version_id": "ver_pay01",
+          "label": "Расчетная ведомость № ВЕД-ЗП-2026-01 — 0202 Дополнительная зарплата и резерв",
+          "amount": "100000.00",
+          "category": "payroll_total",
+          "evidence_ids": [
+            "blk_pay01_line1",
+            "blk_pay01_cat1"
+          ]
+        },
+        {
+          "version_id": "ver_pay02",
+          "label": "Расчетная ведомость № ВЕД-ЗП-2026-02 — 0201 Основная заработная плата",
+          "amount": "1015500.00",
+          "category": "payroll_main",
+          "evidence_ids": [
+            "blk_pay02_line0",
+            "blk_pay02_cat0"
+          ]
+        },
+        {
+          "version_id": "ver_pay02",
+          "label": "Расчетная ведомость № ВЕД-ЗП-2026-02 — 0202 Дополнительная зарплата и резерв",
+          "amount": "101500.00",
+          "category": "payroll_total",
+          "evidence_ids": [
+            "blk_pay02_line1",
+            "blk_pay02_cat1"
+          ]
+        },
+        {
+          "version_id": "ver_pay04",
+          "label": "Расчетная ведомость № ВЕД-ЗП-2026-04 — 0201 Основная заработная плата",
+          "amount": "1018750.00",
+          "category": "payroll_main",
+          "evidence_ids": [
+            "blk_pay04_line0",
+            "blk_pay04_cat0"
+          ]
+        },
+        {
+          "version_id": "ver_pay04",
+          "label": "Расчетная ведомость № ВЕД-ЗП-2026-04 — 0202 Дополнительная зарплата и резерв",
+          "amount": "102000.00",
+          "category": "payroll_total",
+          "evidence_ids": [
+            "blk_pay04_line1",
+            "blk_pay04_cat1"
+          ]
+        },
+        {
+          "version_id": "ver_pay05",
+          "label": "Расчетная ведомость № ВЕД-ЗП-2026-05 — 0201 Основная заработная плата",
+          "amount": "1007920.26",
+          "category": "payroll_main",
+          "evidence_ids": [
+            "blk_pay05_line0",
+            "blk_pay05_cat0"
+          ]
+        },
+        {
+          "version_id": "ver_pay05",
+          "label": "Расчетная ведомость № ВЕД-ЗП-2026-05 — 0202 Дополнительная зарплата и резерв",
+          "amount": "101004.57",
+          "category": "payroll_total",
+          "evidence_ids": [
+            "blk_pay05_line1",
+            "blk_pay05_cat1"
+          ]
+        }
+      ],
+      "exclusions": [],
+      "gaps": [
+        {
+          "code": "missing_months",
+          "message": "Нет ежемесячных документов за: март 2026.",
+          "evidence_ids": [],
+          "version_ids": []
+        }
+      ],
+      "explanation": "Недостаточно данных: документы покрывают не весь период. Учтено по документам (частично): 4 456 674,83 руб."
+    },
+    {
+      "entry_id": "col6",
+      "column": 6,
+      "label": "в т.ч. заработная плата, счет 211",
+      "unit": "руб.",
+      "category": "payroll_account",
+      "reported_value": "5248019.04",
+      "reported_evidence_ids": [
+        "blk_kfz_col6"
+      ],
+      "observed_sum": "4052170.26",
+      "expected_value": null,
+      "diff": null,
+      "coverage": "partial",
+      "status": "insufficient_evidence",
+      "problem": "missing_coverage",
+      "contributions": [
+        {
+          "version_id": "ver_pay01",
+          "label": "Расчетная ведомость № ВЕД-ЗП-2026-01 — 0201 Основная заработная плата",
+          "amount": "1010000.00",
+          "category": "payroll_main",
+          "evidence_ids": [
+            "blk_pay01_line0",
+            "blk_pay01_cat0"
+          ]
+        },
+        {
+          "version_id": "ver_pay02",
+          "label": "Расчетная ведомость № ВЕД-ЗП-2026-02 — 0201 Основная заработная плата",
+          "amount": "1015500.00",
+          "category": "payroll_main",
+          "evidence_ids": [
+            "blk_pay02_line0",
+            "blk_pay02_cat0"
+          ]
+        },
+        {
+          "version_id": "ver_pay04",
+          "label": "Расчетная ведомость № ВЕД-ЗП-2026-04 — 0201 Основная заработная плата",
+          "amount": "1018750.00",
+          "category": "payroll_main",
+          "evidence_ids": [
+            "blk_pay04_line0",
+            "blk_pay04_cat0"
+          ]
+        },
+        {
+          "version_id": "ver_pay05",
+          "label": "Расчетная ведомость № ВЕД-ЗП-2026-05 — 0201 Основная заработная плата",
+          "amount": "1007920.26",
+          "category": "payroll_main",
+          "evidence_ids": [
+            "blk_pay05_line0",
+            "blk_pay05_cat0"
+          ]
+        }
+      ],
+      "exclusions": [],
+      "gaps": [
+        {
+          "code": "combined_line_not_split",
+          "message": "«Расчетная ведомость № ВЕД-ЗП-2026-01 — 0202 Дополнительная зарплата и резерв»: 100 000,00 руб. указаны одной строкой без разбивки по составу.",
+          "evidence_ids": [
+            "blk_pay01_line1",
+            "blk_pay01_cat1"
+          ],
+          "version_ids": [
+            "ver_pay01"
+          ]
+        },
+        {
+          "code": "combined_line_not_split",
+          "message": "«Расчетная ведомость № ВЕД-ЗП-2026-02 — 0202 Дополнительная зарплата и резерв»: 101 500,00 руб. указаны одной строкой без разбивки по составу.",
+          "evidence_ids": [
+            "blk_pay02_line1",
+            "blk_pay02_cat1"
+          ],
+          "version_ids": [
+            "ver_pay02"
+          ]
+        },
+        {
+          "code": "combined_line_not_split",
+          "message": "«Расчетная ведомость № ВЕД-ЗП-2026-04 — 0202 Дополнительная зарплата и резерв»: 102 000,00 руб. указаны одной строкой без разбивки по составу.",
+          "evidence_ids": [
+            "blk_pay04_line1",
+            "blk_pay04_cat1"
+          ],
+          "version_ids": [
+            "ver_pay04"
+          ]
+        },
+        {
+          "code": "combined_line_not_split",
+          "message": "«Расчетная ведомость № ВЕД-ЗП-2026-05 — 0202 Дополнительная зарплата и резерв»: 101 004,57 руб. указаны одной строкой без разбивки по составу.",
+          "evidence_ids": [
+            "blk_pay05_line1",
+            "blk_pay05_cat1"
+          ],
+          "version_ids": [
+            "ver_pay05"
+          ]
+        },
+        {
+          "code": "missing_months",
+          "message": "Нет ежемесячных документов за: март 2026.",
+          "evidence_ids": [],
+          "version_ids": []
+        },
+        {
+          "code": "unsupported_component",
+          "message": "Нет подтверждающих документов по: гр. 8.",
+          "evidence_ids": [],
+          "version_ids": []
+        }
+      ],
+      "explanation": "Недостаточно данных: документы покрывают не весь период. Учтено по документам (частично): 4 052 170,26 руб."
+    },
+    {
+      "entry_id": "col7",
+      "column": 7,
+      "label": "основная заработная плата",
+      "unit": "руб.",
+      "category": "payroll_main",
+      "reported_value": "5054470.26",
+      "reported_evidence_ids": [
+        "blk_kfz_col7"
+      ],
+      "observed_sum": "4052170.26",
+      "expected_value": null,
+      "diff": null,
+      "coverage": "partial",
+      "status": "insufficient_evidence",
+      "problem": "missing_coverage",
+      "contributions": [
+        {
+          "version_id": "ver_pay01",
+          "label": "Расчетная ведомость № ВЕД-ЗП-2026-01 — 0201 Основная заработная плата",
+          "amount": "1010000.00",
+          "category": "payroll_main",
+          "evidence_ids": [
+            "blk_pay01_line0",
+            "blk_pay01_cat0"
+          ]
+        },
+        {
+          "version_id": "ver_pay02",
+          "label": "Расчетная ведомость № ВЕД-ЗП-2026-02 — 0201 Основная заработная плата",
+          "amount": "1015500.00",
+          "category": "payroll_main",
+          "evidence_ids": [
+            "blk_pay02_line0",
+            "blk_pay02_cat0"
+          ]
+        },
+        {
+          "version_id": "ver_pay04",
+          "label": "Расчетная ведомость № ВЕД-ЗП-2026-04 — 0201 Основная заработная плата",
+          "amount": "1018750.00",
+          "category": "payroll_main",
+          "evidence_ids": [
+            "blk_pay04_line0",
+            "blk_pay04_cat0"
+          ]
+        },
+        {
+          "version_id": "ver_pay05",
+          "label": "Расчетная ведомость № ВЕД-ЗП-2026-05 — 0201 Основная заработная плата",
+          "amount": "1007920.26",
+          "category": "payroll_main",
+          "evidence_ids": [
+            "blk_pay05_line0",
+            "blk_pay05_cat0"
+          ]
+        }
+      ],
+      "exclusions": [],
+      "gaps": [
+        {
+          "code": "missing_months",
+          "message": "Нет ежемесячных документов за: март 2026.",
+          "evidence_ids": [],
+          "version_ids": []
+        }
+      ],
+      "explanation": "Недостаточно данных: документы покрывают не весь период. Учтено по документам (частично): 4 052 170,26 руб."
+    },
+    {
+      "entry_id": "col8",
+      "column": 8,
+      "label": "дополнительная заработная плата",
+      "unit": "руб.",
+      "category": "payroll_additional",
+      "reported_value": "193548.78",
+      "reported_evidence_ids": [
+        "blk_kfz_col8"
+      ],
+      "observed_sum": null,
+      "expected_value": null,
+      "diff": null,
+      "coverage": "none",
+      "status": "insufficient_evidence",
+      "problem": "no_supporting_document",
+      "contributions": [],
+      "exclusions": [],
+      "gaps": [
+        {
+          "code": "combined_line_not_split",
+          "message": "«Расчетная ведомость № ВЕД-ЗП-2026-01 — 0202 Дополнительная зарплата и резерв»: 100 000,00 руб. указаны одной строкой без разбивки по составу.",
+          "evidence_ids": [
+            "blk_pay01_line1",
+            "blk_pay01_cat1"
+          ],
+          "version_ids": [
+            "ver_pay01"
+          ]
+        },
+        {
+          "code": "combined_line_not_split",
+          "message": "«Расчетная ведомость № ВЕД-ЗП-2026-02 — 0202 Дополнительная зарплата и резерв»: 101 500,00 руб. указаны одной строкой без разбивки по составу.",
+          "evidence_ids": [
+            "blk_pay02_line1",
+            "blk_pay02_cat1"
+          ],
+          "version_ids": [
+            "ver_pay02"
+          ]
+        },
+        {
+          "code": "combined_line_not_split",
+          "message": "«Расчетная ведомость № ВЕД-ЗП-2026-04 — 0202 Дополнительная зарплата и резерв»: 102 000,00 руб. указаны одной строкой без разбивки по составу.",
+          "evidence_ids": [
+            "blk_pay04_line1",
+            "blk_pay04_cat1"
+          ],
+          "version_ids": [
+            "ver_pay04"
+          ]
+        },
+        {
+          "code": "combined_line_not_split",
+          "message": "«Расчетная ведомость № ВЕД-ЗП-2026-05 — 0202 Дополнительная зарплата и резерв»: 101 004,57 руб. указаны одной строкой без разбивки по составу.",
+          "evidence_ids": [
+            "blk_pay05_line1",
+            "blk_pay05_cat1"
+          ],
+          "version_ids": [
+            "ver_pay05"
+          ]
+        },
+        {
+          "code": "missing_months",
+          "message": "Нет ежемесячных документов за: январь 2026, февраль 2026, март 2026, апрель 2026, май 2026.",
+          "evidence_ids": [],
+          "version_ids": []
+        }
+      ],
+      "explanation": "Недостаточно данных: нет отдельного подтверждающего документа."
+    },
+    {
+      "entry_id": "col9",
+      "column": 9,
+      "label": "резерв отпусков",
+      "unit": "руб.",
+      "category": "leave_reserve",
+      "reported_value": "310455.79",
+      "reported_evidence_ids": [
+        "blk_kfz_col9"
+      ],
+      "observed_sum": null,
+      "expected_value": null,
+      "diff": null,
+      "coverage": "none",
+      "status": "insufficient_evidence",
+      "problem": "no_supporting_document",
+      "contributions": [],
+      "exclusions": [],
+      "gaps": [
+        {
+          "code": "combined_line_not_split",
+          "message": "«Расчетная ведомость № ВЕД-ЗП-2026-01 — 0202 Дополнительная зарплата и резерв»: 100 000,00 руб. указаны одной строкой без разбивки по составу.",
+          "evidence_ids": [
+            "blk_pay01_line1",
+            "blk_pay01_cat1"
+          ],
+          "version_ids": [
+            "ver_pay01"
+          ]
+        },
+        {
+          "code": "combined_line_not_split",
+          "message": "«Расчетная ведомость № ВЕД-ЗП-2026-02 — 0202 Дополнительная зарплата и резерв»: 101 500,00 руб. указаны одной строкой без разбивки по составу.",
+          "evidence_ids": [
+            "blk_pay02_line1",
+            "blk_pay02_cat1"
+          ],
+          "version_ids": [
+            "ver_pay02"
+          ]
+        },
+        {
+          "code": "combined_line_not_split",
+          "message": "«Расчетная ведомость № ВЕД-ЗП-2026-04 — 0202 Дополнительная зарплата и резерв»: 102 000,00 руб. указаны одной строкой без разбивки по составу.",
+          "evidence_ids": [
+            "blk_pay04_line1",
+            "blk_pay04_cat1"
+          ],
+          "version_ids": [
+            "ver_pay04"
+          ]
+        },
+        {
+          "code": "combined_line_not_split",
+          "message": "«Расчетная ведомость № ВЕД-ЗП-2026-05 — 0202 Дополнительная зарплата и резерв»: 101 004,57 руб. указаны одной строкой без разбивки по составу.",
+          "evidence_ids": [
+            "blk_pay05_line1",
+            "blk_pay05_cat1"
+          ],
+          "version_ids": [
+            "ver_pay05"
+          ]
+        },
+        {
+          "code": "missing_months",
+          "message": "Нет ежемесячных документов за: январь 2026, февраль 2026, март 2026, апрель 2026, май 2026.",
+          "evidence_ids": [],
+          "version_ids": []
+        }
+      ],
+      "explanation": "Недостаточно данных: нет отдельного подтверждающего документа."
+    },
+    {
+      "entry_id": "col10",
+      "column": 10,
+      "label": "Страховые взносы — всего (0300)",
+      "unit": "руб.",
+      "category": "contributions_total",
+      "reported_value": "1671359.96",
+      "reported_evidence_ids": [
+        "blk_kfz_col10"
+      ],
+      "observed_sum": "1671359.96",
+      "expected_value": "1671359.96",
+      "diff": "0.00",
+      "coverage": "complete",
+      "status": "verified",
+      "problem": null,
+      "contributions": [
+        {
+          "version_id": "ver_con01",
+          "label": "Расчет страховых взносов № ВЗН-2026-01 — 0300 Начислено взносов",
+          "amount": "333000.00",
+          "category": "contributions_total",
+          "evidence_ids": [
+            "blk_con01_line0",
+            "blk_con01_cat0"
+          ]
+        },
+        {
+          "version_id": "ver_con02",
+          "label": "Расчет страховых взносов № ВЗН-2026-02 — 0300 Начислено взносов",
+          "amount": "335100.00",
+          "category": "contributions_total",
+          "evidence_ids": [
+            "blk_con02_line0",
+            "blk_con02_cat0"
+          ]
+        },
+        {
+          "version_id": "ver_con03",
+          "label": "Расчет страховых взносов № ВЗН-2026-03 — 0300 Начислено взносов",
+          "amount": "330540.00",
+          "category": "contributions_total",
+          "evidence_ids": [
+            "blk_con03_line0",
+            "blk_con03_cat0"
+          ]
+        },
+        {
+          "version_id": "ver_con04",
+          "label": "Расчет страховых взносов № ВЗН-2026-04 — 0300 Начислено взносов",
+          "amount": "337225.00",
+          "category": "contributions_total",
+          "evidence_ids": [
+            "blk_con04_line0",
+            "blk_con04_cat0"
+          ]
+        },
+        {
+          "version_id": "ver_con05",
+          "label": "Расчет страховых взносов № ВЗН-2026-05 — 0300 Начислено взносов",
+          "amount": "335494.96",
+          "category": "contributions_total",
+          "evidence_ids": [
+            "blk_con05_line0",
+            "blk_con05_cat0"
+          ]
+        }
+      ],
+      "exclusions": [],
+      "gaps": [],
+      "explanation": "Сумма 5 источников: 1 671 359,96 руб., совпадает с отчетом."
+    },
+    {
+      "entry_id": "col11",
+      "column": 11,
+      "label": "взносы на заработную плату, счет 213",
+      "unit": "руб.",
+      "category": "contributions_account",
+      "reported_value": "1578126.37",
+      "reported_evidence_ids": [
+        "blk_kfz_col11"
+      ],
+      "observed_sum": null,
+      "expected_value": null,
+      "diff": null,
+      "coverage": "none",
+      "status": "insufficient_evidence",
+      "problem": "no_supporting_document",
+      "contributions": [],
+      "exclusions": [],
+      "gaps": [
+        {
+          "code": "combined_line_not_split",
+          "message": "«Расчет страховых взносов № ВЗН-2026-01 — 0300 Начислено взносов»: 333 000,00 руб. указаны одной строкой без разбивки по составу.",
+          "evidence_ids": [
+            "blk_con01_line0",
+            "blk_con01_cat0"
+          ],
+          "version_ids": [
+            "ver_con01"
+          ]
+        },
+        {
+          "code": "combined_line_not_split",
+          "message": "«Расчет страховых взносов № ВЗН-2026-02 — 0300 Начислено взносов»: 335 100,00 руб. указаны одной строкой без разбивки по составу.",
+          "evidence_ids": [
+            "blk_con02_line0",
+            "blk_con02_cat0"
+          ],
+          "version_ids": [
+            "ver_con02"
+          ]
+        },
+        {
+          "code": "combined_line_not_split",
+          "message": "«Расчет страховых взносов № ВЗН-2026-03 — 0300 Начислено взносов»: 330 540,00 руб. указаны одной строкой без разбивки по составу.",
+          "evidence_ids": [
+            "blk_con03_line0",
+            "blk_con03_cat0"
+          ],
+          "version_ids": [
+            "ver_con03"
+          ]
+        },
+        {
+          "code": "combined_line_not_split",
+          "message": "«Расчет страховых взносов № ВЗН-2026-04 — 0300 Начислено взносов»: 337 225,00 руб. указаны одной строкой без разбивки по составу.",
+          "evidence_ids": [
+            "blk_con04_line0",
+            "blk_con04_cat0"
+          ],
+          "version_ids": [
+            "ver_con04"
+          ]
+        },
+        {
+          "code": "combined_line_not_split",
+          "message": "«Расчет страховых взносов № ВЗН-2026-05 — 0300 Начислено взносов»: 335 494,96 руб. указаны одной строкой без разбивки по составу.",
+          "evidence_ids": [
+            "blk_con05_line0",
+            "blk_con05_cat0"
+          ],
+          "version_ids": [
+            "ver_con05"
+          ]
+        },
+        {
+          "code": "missing_months",
+          "message": "Нет ежемесячных документов за: январь 2026, февраль 2026, март 2026, апрель 2026, май 2026.",
+          "evidence_ids": [],
+          "version_ids": []
+        },
+        {
+          "code": "unsupported_component",
+          "message": "Нет подтверждающих документов по: гр. 12, гр. 13.",
+          "evidence_ids": [],
+          "version_ids": []
+        }
+      ],
+      "explanation": "Недостаточно данных: нет отдельного подтверждающего документа."
+    },
+    {
+      "entry_id": "col12",
+      "column": 12,
+      "label": "взносы на основную заработную плату",
+      "unit": "руб.",
+      "category": "contributions_main",
+      "reported_value": "1526450.09",
+      "reported_evidence_ids": [
+        "blk_kfz_col12"
+      ],
+      "observed_sum": null,
+      "expected_value": null,
+      "diff": null,
+      "coverage": "none",
+      "status": "insufficient_evidence",
+      "problem": "no_supporting_document",
+      "contributions": [],
+      "exclusions": [],
+      "gaps": [
+        {
+          "code": "combined_line_not_split",
+          "message": "«Расчет страховых взносов № ВЗН-2026-01 — 0300 Начислено взносов»: 333 000,00 руб. указаны одной строкой без разбивки по составу.",
+          "evidence_ids": [
+            "blk_con01_line0",
+            "blk_con01_cat0"
+          ],
+          "version_ids": [
+            "ver_con01"
+          ]
+        },
+        {
+          "code": "combined_line_not_split",
+          "message": "«Расчет страховых взносов № ВЗН-2026-02 — 0300 Начислено взносов»: 335 100,00 руб. указаны одной строкой без разбивки по составу.",
+          "evidence_ids": [
+            "blk_con02_line0",
+            "blk_con02_cat0"
+          ],
+          "version_ids": [
+            "ver_con02"
+          ]
+        },
+        {
+          "code": "combined_line_not_split",
+          "message": "«Расчет страховых взносов № ВЗН-2026-03 — 0300 Начислено взносов»: 330 540,00 руб. указаны одной строкой без разбивки по составу.",
+          "evidence_ids": [
+            "blk_con03_line0",
+            "blk_con03_cat0"
+          ],
+          "version_ids": [
+            "ver_con03"
+          ]
+        },
+        {
+          "code": "combined_line_not_split",
+          "message": "«Расчет страховых взносов № ВЗН-2026-04 — 0300 Начислено взносов»: 337 225,00 руб. указаны одной строкой без разбивки по составу.",
+          "evidence_ids": [
+            "blk_con04_line0",
+            "blk_con04_cat0"
+          ],
+          "version_ids": [
+            "ver_con04"
+          ]
+        },
+        {
+          "code": "combined_line_not_split",
+          "message": "«Расчет страховых взносов № ВЗН-2026-05 — 0300 Начислено взносов»: 335 494,96 руб. указаны одной строкой без разбивки по составу.",
+          "evidence_ids": [
+            "blk_con05_line0",
+            "blk_con05_cat0"
+          ],
+          "version_ids": [
+            "ver_con05"
+          ]
+        },
+        {
+          "code": "missing_months",
+          "message": "Нет ежемесячных документов за: январь 2026, февраль 2026, март 2026, апрель 2026, май 2026.",
+          "evidence_ids": [],
+          "version_ids": []
+        }
+      ],
+      "explanation": "Недостаточно данных: нет отдельного подтверждающего документа."
+    },
+    {
+      "entry_id": "col13",
+      "column": 13,
+      "label": "взносы на дополнительную заработную плату",
+      "unit": "руб.",
+      "category": "contributions_additional",
+      "reported_value": "51676.28",
+      "reported_evidence_ids": [
+        "blk_kfz_col13"
+      ],
+      "observed_sum": null,
+      "expected_value": null,
+      "diff": null,
+      "coverage": "none",
+      "status": "insufficient_evidence",
+      "problem": "no_supporting_document",
+      "contributions": [],
+      "exclusions": [],
+      "gaps": [
+        {
+          "code": "combined_line_not_split",
+          "message": "«Расчет страховых взносов № ВЗН-2026-01 — 0300 Начислено взносов»: 333 000,00 руб. указаны одной строкой без разбивки по составу.",
+          "evidence_ids": [
+            "blk_con01_line0",
+            "blk_con01_cat0"
+          ],
+          "version_ids": [
+            "ver_con01"
+          ]
+        },
+        {
+          "code": "combined_line_not_split",
+          "message": "«Расчет страховых взносов № ВЗН-2026-02 — 0300 Начислено взносов»: 335 100,00 руб. указаны одной строкой без разбивки по составу.",
+          "evidence_ids": [
+            "blk_con02_line0",
+            "blk_con02_cat0"
+          ],
+          "version_ids": [
+            "ver_con02"
+          ]
+        },
+        {
+          "code": "combined_line_not_split",
+          "message": "«Расчет страховых взносов № ВЗН-2026-03 — 0300 Начислено взносов»: 330 540,00 руб. указаны одной строкой без разбивки по составу.",
+          "evidence_ids": [
+            "blk_con03_line0",
+            "blk_con03_cat0"
+          ],
+          "version_ids": [
+            "ver_con03"
+          ]
+        },
+        {
+          "code": "combined_line_not_split",
+          "message": "«Расчет страховых взносов № ВЗН-2026-04 — 0300 Начислено взносов»: 337 225,00 руб. указаны одной строкой без разбивки по составу.",
+          "evidence_ids": [
+            "blk_con04_line0",
+            "blk_con04_cat0"
+          ],
+          "version_ids": [
+            "ver_con04"
+          ]
+        },
+        {
+          "code": "combined_line_not_split",
+          "message": "«Расчет страховых взносов № ВЗН-2026-05 — 0300 Начислено взносов»: 335 494,96 руб. указаны одной строкой без разбивки по составу.",
+          "evidence_ids": [
+            "blk_con05_line0",
+            "blk_con05_cat0"
+          ],
+          "version_ids": [
+            "ver_con05"
+          ]
+        },
+        {
+          "code": "missing_months",
+          "message": "Нет ежемесячных документов за: январь 2026, февраль 2026, март 2026, апрель 2026, май 2026.",
+          "evidence_ids": [],
+          "version_ids": []
+        }
+      ],
+      "explanation": "Недостаточно данных: нет отдельного подтверждающего документа."
+    },
+    {
+      "entry_id": "col14",
+      "column": 14,
+      "label": "взносы на резерв отпусков",
+      "unit": "руб.",
+      "category": "contributions_reserve",
+      "reported_value": "93233.59",
+      "reported_evidence_ids": [
+        "blk_kfz_col14"
+      ],
+      "observed_sum": null,
+      "expected_value": null,
+      "diff": null,
+      "coverage": "none",
+      "status": "insufficient_evidence",
+      "problem": "no_supporting_document",
+      "contributions": [],
+      "exclusions": [],
+      "gaps": [
+        {
+          "code": "combined_line_not_split",
+          "message": "«Расчет страховых взносов № ВЗН-2026-01 — 0300 Начислено взносов»: 333 000,00 руб. указаны одной строкой без разбивки по составу.",
+          "evidence_ids": [
+            "blk_con01_line0",
+            "blk_con01_cat0"
+          ],
+          "version_ids": [
+            "ver_con01"
+          ]
+        },
+        {
+          "code": "combined_line_not_split",
+          "message": "«Расчет страховых взносов № ВЗН-2026-02 — 0300 Начислено взносов»: 335 100,00 руб. указаны одной строкой без разбивки по составу.",
+          "evidence_ids": [
+            "blk_con02_line0",
+            "blk_con02_cat0"
+          ],
+          "version_ids": [
+            "ver_con02"
+          ]
+        },
+        {
+          "code": "combined_line_not_split",
+          "message": "«Расчет страховых взносов № ВЗН-2026-03 — 0300 Начислено взносов»: 330 540,00 руб. указаны одной строкой без разбивки по составу.",
+          "evidence_ids": [
+            "blk_con03_line0",
+            "blk_con03_cat0"
+          ],
+          "version_ids": [
+            "ver_con03"
+          ]
+        },
+        {
+          "code": "combined_line_not_split",
+          "message": "«Расчет страховых взносов № ВЗН-2026-04 — 0300 Начислено взносов»: 337 225,00 руб. указаны одной строкой без разбивки по составу.",
+          "evidence_ids": [
+            "blk_con04_line0",
+            "blk_con04_cat0"
+          ],
+          "version_ids": [
+            "ver_con04"
+          ]
+        },
+        {
+          "code": "combined_line_not_split",
+          "message": "«Расчет страховых взносов № ВЗН-2026-05 — 0300 Начислено взносов»: 335 494,96 руб. указаны одной строкой без разбивки по составу.",
+          "evidence_ids": [
+            "blk_con05_line0",
+            "blk_con05_cat0"
+          ],
+          "version_ids": [
+            "ver_con05"
+          ]
+        },
+        {
+          "code": "missing_months",
+          "message": "Нет ежемесячных документов за: январь 2026, февраль 2026, март 2026, апрель 2026, май 2026.",
+          "evidence_ids": [],
+          "version_ids": []
+        }
+      ],
+      "explanation": "Недостаточно данных: нет отдельного подтверждающего документа."
+    },
+    {
+      "entry_id": "col15",
+      "column": 15,
+      "label": "Общепроизводственные затраты (0800)",
+      "unit": "руб.",
+      "category": "production_overhead",
+      "reported_value": "1145798.10",
+      "reported_evidence_ids": [
+        "blk_kfz_col15"
+      ],
+      "observed_sum": "1133298.10",
+      "expected_value": "1133298.10",
+      "diff": "12500.00",
+      "coverage": "complete",
+      "status": "discrepancy",
+      "problem": "amount_mismatch",
+      "contributions": [
+        {
+          "version_id": "ver_act118",
+          "label": "Акт № 118 от 28.01.2026",
+          "amount": "245000.00",
+          "category": "production_overhead",
+          "evidence_ids": [
+            "blk_act118_line0",
+            "blk_act118_cat0"
+          ]
+        },
+        {
+          "version_id": "ver_sa174",
+          "label": "Счет-акт № 174 от 25.02.2026",
+          "amount": "318298.10",
+          "category": "production_overhead",
+          "evidence_ids": [
+            "blk_sa174_line0",
+            "blk_sa174_cat0"
+          ]
+        },
+        {
+          "version_id": "ver_kl31",
+          "label": "Служебная записка № КЛ-31 от 10.04.2026",
+          "amount": "270000.00",
+          "category": "production_overhead",
+          "evidence_ids": [
+            "blk_kl31_line0",
+            "blk_kl31_cat0"
+          ]
+        },
+        {
+          "version_id": "ver_upd77",
+          "label": "УПД № 0426-77 от 22.05.2026",
+          "amount": "300000.00",
+          "category": "production_overhead",
+          "evidence_ids": [
+            "blk_upd77_line0",
+            "blk_upd77_cat0"
+          ]
+        }
+      ],
+      "exclusions": [],
+      "gaps": [],
+      "explanation": "По документам (4 источника) 1 133 298,10 руб., в отчете 1 145 798,10 руб.: отчет завышен на 12 500,00 руб. Ни один документ набора не объясняет разницу. Для 3 источников период определен по дате документа."
+    },
+    {
+      "entry_id": "col16",
+      "column": 16,
+      "label": "Общехозяйственные затраты (0900)",
+      "unit": "руб.",
+      "category": "administrative_overhead",
+      "reported_value": "3204744.51",
+      "reported_evidence_ids": [
+        "blk_kfz_col16"
+      ],
+      "observed_sum": "3204744.51",
+      "expected_value": "3204744.51",
+      "diff": "0.00",
+      "coverage": "complete",
+      "status": "verified",
+      "problem": null,
+      "contributions": [
+        {
+          "version_id": "ver_ia15",
+          "label": "Акт № ИА-15 от 31.01.2026",
+          "amount": "620000.00",
+          "category": "administrative_overhead",
+          "evidence_ids": [
+            "blk_ia15_line0",
+            "blk_ia15_cat0"
+          ]
+        },
+        {
+          "version_id": "ver_adm27",
+          "label": "Акт № ADM-27 от 27.02.2026",
+          "amount": "487500.00",
+          "category": "administrative_overhead",
+          "evidence_ids": [
+            "blk_adm27_line0",
+            "blk_adm27_cat0"
+          ]
+        },
+        {
+          "version_id": "ver_it0326",
+          "label": "Справка о расходах ИТ № 03-26",
+          "amount": "703244.51",
+          "category": "administrative_overhead",
+          "evidence_ids": [
+            "blk_it0326_line0",
+            "blk_it0326_cat0"
+          ]
+        },
+        {
+          "version_id": "ver_sv0426",
+          "label": "Акт № СВ-0426 от 29.04.2026",
+          "amount": "650000.00",
+          "category": "administrative_overhead",
+          "evidence_ids": [
+            "blk_sv0426_line0",
+            "blk_sv0426_cat0"
+          ]
+        },
+        {
+          "version_id": "ver_upr55",
+          "label": "УПД № УПР-55 от 29.05.2026",
+          "amount": "744000.00",
+          "category": "administrative_overhead",
+          "evidence_ids": [
+            "blk_upr55_line0",
+            "blk_upr55_cat0"
+          ]
+        }
+      ],
+      "exclusions": [
+        {
+          "version_id": "ver_adm27copy",
+          "label": "Акт № ADM-27 от 27.02.2026 (файл adm27copy.pdf)",
+          "reason": "duplicate",
+          "explanation": "Файл побайтно совпадает с «Акт № ADM-27 от 27.02.2026» (файл adm27.pdf).",
+          "amount": "487500.00",
+          "duplicate_of": "ver_adm27",
+          "evidence_ids": [
+            "blk_adm27copy_amount"
+          ]
+        },
+        {
+          "version_id": "ver_org0603",
+          "label": "Акт № ОРГ-0603 от 03.06.2026",
+          "reason": "outside_period",
+          "explanation": "Период 01.06.2026–30.06.2026 вне проверяемого периода 01.01.2026–31.05.2026.",
+          "amount": "165000.00",
+          "duplicate_of": null,
+          "evidence_ids": [
+            "blk_org0603_period"
+          ]
+        },
+        {
+          "version_id": "ver_adm75",
+          "label": "Акт № ADM-75 от 15.05.2026",
+          "reason": "other_contract",
+          "explanation": "Договор 24/03/16-02, а не 24/03/15-01.",
+          "amount": "98000.00",
+          "duplicate_of": null,
+          "evidence_ids": [
+            "blk_adm75_contract"
+          ]
+        }
+      ],
+      "gaps": [],
+      "explanation": "Сумма 5 источников: 3 204 744,51 руб., совпадает с отчетом. Для 4 источников период определен по дате документа."
+    },
+    {
+      "entry_id": "col17",
+      "column": 17,
+      "label": "Итого",
+      "unit": "руб.",
+      "category": "total",
+      "reported_value": "11580377.40",
+      "reported_evidence_ids": [
+        "blk_kfz_col17"
+      ],
+      "observed_sum": "10466077.40",
+      "expected_value": null,
+      "diff": null,
+      "coverage": "partial",
+      "status": "insufficient_evidence",
+      "problem": "missing_coverage",
+      "contributions": [
+        {
+          "version_id": "ver_pay01",
+          "label": "Расчетная ведомость № ВЕД-ЗП-2026-01 — 0201 Основная заработная плата",
+          "amount": "1010000.00",
+          "category": "payroll_main",
+          "evidence_ids": [
+            "blk_pay01_line0",
+            "blk_pay01_cat0"
+          ]
+        },
+        {
+          "version_id": "ver_pay01",
+          "label": "Расчетная ведомость № ВЕД-ЗП-2026-01 — 0202 Дополнительная зарплата и резерв",
+          "amount": "100000.00",
+          "category": "payroll_total",
+          "evidence_ids": [
+            "blk_pay01_line1",
+            "blk_pay01_cat1"
+          ]
+        },
+        {
+          "version_id": "ver_pay02",
+          "label": "Расчетная ведомость № ВЕД-ЗП-2026-02 — 0201 Основная заработная плата",
+          "amount": "1015500.00",
+          "category": "payroll_main",
+          "evidence_ids": [
+            "blk_pay02_line0",
+            "blk_pay02_cat0"
+          ]
+        },
+        {
+          "version_id": "ver_pay02",
+          "label": "Расчетная ведомость № ВЕД-ЗП-2026-02 — 0202 Дополнительная зарплата и резерв",
+          "amount": "101500.00",
+          "category": "payroll_total",
+          "evidence_ids": [
+            "blk_pay02_line1",
+            "blk_pay02_cat1"
+          ]
+        },
+        {
+          "version_id": "ver_pay04",
+          "label": "Расчетная ведомость № ВЕД-ЗП-2026-04 — 0201 Основная заработная плата",
+          "amount": "1018750.00",
+          "category": "payroll_main",
+          "evidence_ids": [
+            "blk_pay04_line0",
+            "blk_pay04_cat0"
+          ]
+        },
+        {
+          "version_id": "ver_pay04",
+          "label": "Расчетная ведомость № ВЕД-ЗП-2026-04 — 0202 Дополнительная зарплата и резерв",
+          "amount": "102000.00",
+          "category": "payroll_total",
+          "evidence_ids": [
+            "blk_pay04_line1",
+            "blk_pay04_cat1"
+          ]
+        },
+        {
+          "version_id": "ver_pay05",
+          "label": "Расчетная ведомость № ВЕД-ЗП-2026-05 — 0201 Основная заработная плата",
+          "amount": "1007920.26",
+          "category": "payroll_main",
+          "evidence_ids": [
+            "blk_pay05_line0",
+            "blk_pay05_cat0"
+          ]
+        },
+        {
+          "version_id": "ver_pay05",
+          "label": "Расчетная ведомость № ВЕД-ЗП-2026-05 — 0202 Дополнительная зарплата и резерв",
+          "amount": "101004.57",
+          "category": "payroll_total",
+          "evidence_ids": [
+            "blk_pay05_line1",
+            "blk_pay05_cat1"
+          ]
+        },
+        {
+          "version_id": "ver_con01",
+          "label": "Расчет страховых взносов № ВЗН-2026-01 — 0300 Начислено взносов",
+          "amount": "333000.00",
+          "category": "contributions_total",
+          "evidence_ids": [
+            "blk_con01_line0",
+            "blk_con01_cat0"
+          ]
+        },
+        {
+          "version_id": "ver_con02",
+          "label": "Расчет страховых взносов № ВЗН-2026-02 — 0300 Начислено взносов",
+          "amount": "335100.00",
+          "category": "contributions_total",
+          "evidence_ids": [
+            "blk_con02_line0",
+            "blk_con02_cat0"
+          ]
+        },
+        {
+          "version_id": "ver_con03",
+          "label": "Расчет страховых взносов № ВЗН-2026-03 — 0300 Начислено взносов",
+          "amount": "330540.00",
+          "category": "contributions_total",
+          "evidence_ids": [
+            "blk_con03_line0",
+            "blk_con03_cat0"
+          ]
+        },
+        {
+          "version_id": "ver_con04",
+          "label": "Расчет страховых взносов № ВЗН-2026-04 — 0300 Начислено взносов",
+          "amount": "337225.00",
+          "category": "contributions_total",
+          "evidence_ids": [
+            "blk_con04_line0",
+            "blk_con04_cat0"
+          ]
+        },
+        {
+          "version_id": "ver_con05",
+          "label": "Расчет страховых взносов № ВЗН-2026-05 — 0300 Начислено взносов",
+          "amount": "335494.96",
+          "category": "contributions_total",
+          "evidence_ids": [
+            "blk_con05_line0",
+            "blk_con05_cat0"
+          ]
+        },
+        {
+          "version_id": "ver_act118",
+          "label": "Акт № 118 от 28.01.2026",
+          "amount": "245000.00",
+          "category": "production_overhead",
+          "evidence_ids": [
+            "blk_act118_line0",
+            "blk_act118_cat0"
+          ]
+        },
+        {
+          "version_id": "ver_sa174",
+          "label": "Счет-акт № 174 от 25.02.2026",
+          "amount": "318298.10",
+          "category": "production_overhead",
+          "evidence_ids": [
+            "blk_sa174_line0",
+            "blk_sa174_cat0"
+          ]
+        },
+        {
+          "version_id": "ver_kl31",
+          "label": "Служебная записка № КЛ-31 от 10.04.2026",
+          "amount": "270000.00",
+          "category": "production_overhead",
+          "evidence_ids": [
+            "blk_kl31_line0",
+            "blk_kl31_cat0"
+          ]
+        },
+        {
+          "version_id": "ver_upd77",
+          "label": "УПД № 0426-77 от 22.05.2026",
+          "amount": "300000.00",
+          "category": "production_overhead",
+          "evidence_ids": [
+            "blk_upd77_line0",
+            "blk_upd77_cat0"
+          ]
+        },
+        {
+          "version_id": "ver_ia15",
+          "label": "Акт № ИА-15 от 31.01.2026",
+          "amount": "620000.00",
+          "category": "administrative_overhead",
+          "evidence_ids": [
+            "blk_ia15_line0",
+            "blk_ia15_cat0"
+          ]
+        },
+        {
+          "version_id": "ver_adm27",
+          "label": "Акт № ADM-27 от 27.02.2026",
+          "amount": "487500.00",
+          "category": "administrative_overhead",
+          "evidence_ids": [
+            "blk_adm27_line0",
+            "blk_adm27_cat0"
+          ]
+        },
+        {
+          "version_id": "ver_it0326",
+          "label": "Справка о расходах ИТ № 03-26",
+          "amount": "703244.51",
+          "category": "administrative_overhead",
+          "evidence_ids": [
+            "blk_it0326_line0",
+            "blk_it0326_cat0"
+          ]
+        },
+        {
+          "version_id": "ver_sv0426",
+          "label": "Акт № СВ-0426 от 29.04.2026",
+          "amount": "650000.00",
+          "category": "administrative_overhead",
+          "evidence_ids": [
+            "blk_sv0426_line0",
+            "blk_sv0426_cat0"
+          ]
+        },
+        {
+          "version_id": "ver_upr55",
+          "label": "УПД № УПР-55 от 29.05.2026",
+          "amount": "744000.00",
+          "category": "administrative_overhead",
+          "evidence_ids": [
+            "blk_upr55_line0",
+            "blk_upr55_cat0"
+          ]
+        }
+      ],
+      "exclusions": [
+        {
+          "version_id": "ver_adm27copy",
+          "label": "Акт № ADM-27 от 27.02.2026 (файл adm27copy.pdf)",
+          "reason": "duplicate",
+          "explanation": "Файл побайтно совпадает с «Акт № ADM-27 от 27.02.2026» (файл adm27.pdf).",
+          "amount": "487500.00",
+          "duplicate_of": "ver_adm27",
+          "evidence_ids": [
+            "blk_adm27copy_amount"
+          ]
+        },
+        {
+          "version_id": "ver_org0603",
+          "label": "Акт № ОРГ-0603 от 03.06.2026",
+          "reason": "outside_period",
+          "explanation": "Период 01.06.2026–30.06.2026 вне проверяемого периода 01.01.2026–31.05.2026.",
+          "amount": "165000.00",
+          "duplicate_of": null,
+          "evidence_ids": [
+            "blk_org0603_period"
+          ]
+        },
+        {
+          "version_id": "ver_adm75",
+          "label": "Акт № ADM-75 от 15.05.2026",
+          "reason": "other_contract",
+          "explanation": "Договор 24/03/16-02, а не 24/03/15-01.",
+          "amount": "98000.00",
+          "duplicate_of": null,
+          "evidence_ids": [
+            "blk_adm75_contract"
+          ]
+        }
+      ],
+      "gaps": [
+        {
+          "code": "missing_months",
+          "message": "Нет ежемесячных документов за: март 2026.",
+          "evidence_ids": [],
+          "version_ids": []
+        }
+      ],
+      "explanation": "Недостаточно данных: документы покрывают не весь период. Учтено по документам (частично): 10 466 077,40 руб."
+    }
+  ],
+  "exclusions": [
+    {
+      "version_id": "ver_adm27copy",
+      "label": "Акт № ADM-27 от 27.02.2026 (файл adm27copy.pdf)",
+      "reason": "duplicate",
+      "explanation": "Файл побайтно совпадает с «Акт № ADM-27 от 27.02.2026» (файл adm27.pdf).",
+      "amount": "487500.00",
+      "duplicate_of": "ver_adm27",
+      "evidence_ids": [
+        "blk_adm27copy_amount"
+      ]
+    },
+    {
+      "version_id": "ver_org0603",
+      "label": "Акт № ОРГ-0603 от 03.06.2026",
+      "reason": "outside_period",
+      "explanation": "Период 01.06.2026–30.06.2026 вне проверяемого периода 01.01.2026–31.05.2026.",
+      "amount": "165000.00",
+      "duplicate_of": null,
+      "evidence_ids": [
+        "blk_org0603_period"
+      ]
+    },
+    {
+      "version_id": "ver_adm75",
+      "label": "Акт № ADM-75 от 15.05.2026",
+      "reason": "other_contract",
+      "explanation": "Договор 24/03/16-02, а не 24/03/15-01.",
+      "amount": "98000.00",
+      "duplicate_of": null,
+      "evidence_ids": [
+        "blk_adm75_contract"
+      ]
+    },
+    {
+      "version_id": "ver_readme",
+      "label": "readme.pdf",
+      "reason": "context_only",
+      "explanation": "Справочный документ набора, не первичный документ.",
+      "amount": null,
+      "duplicate_of": null,
+      "evidence_ids": []
+    }
+  ],
+  "unresolved": [],
+  "conclusion": {
+    "component_discrepancies": [
+      {
+        "entry_id": "col15",
+        "diff": "12500.00",
+        "problem": "amount_mismatch",
+        "explanation": "По документам (4 источника) 1 133 298,10 руб., в отчете 1 145 798,10 руб.: отчет завышен на 12 500,00 руб. Ни один документ набора не объясняет разницу. Для 3 источников период определен по дате документа.",
+        "evidence_ids": [
+          "blk_kfz_col15"
+        ]
+      }
+    ],
+    "incomplete_indicators": [
+      "col3",
+      "col5",
+      "col6",
+      "col7",
+      "col8",
+      "col9",
+      "col11",
+      "col12",
+      "col13",
+      "col14",
+      "col17"
+    ],
+    "grand_total": {
+      "entry_id": "col17",
+      "status": "insufficient_evidence",
+      "diff": null,
+      "explained_by": [],
+      "unexplained_diff": null
+    },
+    "summary": "Показателей: 15; подтверждено: 3, расхождений: 1, недостаточно данных: 11. Итог отчета не подтвержден: документы покрывают не весь период. Подтвержденные расхождения по статьям: Общепроизводственные затраты (0800) (+12 500,00)."
+  }
+}

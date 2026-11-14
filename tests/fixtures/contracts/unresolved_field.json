@@ -1,0 +1,20 @@
+{
+  "state": "unresolved",
+  "value": null,
+  "source_text": "550,00",
+  "evidence_ids": [
+    "blk_synthetic_amount"
+  ],
+  "basis": null,
+  "findings": [
+    {
+      "code": "transcription_mismatch",
+      "message": "Proposed 550.00 but the cited block reads 350,00; the value is not repaired.",
+      "evidence_ids": [
+        "blk_synthetic_amount"
+      ],
+      "version_ids": []
+    }
+  ],
+  "reason": "Proposed value does not match its evidence after two reinspection rounds."
+}

@@ -1,0 +1,309 @@
+{
+  "scope": {
+    "contract": "24/03/15-01",
+    "report_row": "3 этап, 2026 г.",
+    "date_from": "2026-01-01",
+    "date_to": "2026-05-31",
+    "coverage_basis": "supplied_bundle",
+    "confirmed": true
+  },
+  "tolerance": "0.01",
+  "indicators": [
+    {
+      "entry_id": "col4",
+      "column": 4,
+      "label": "Материальные затраты",
+      "unit": "руб.",
+      "category": "materials",
+      "reported_value": "0.00",
+      "reported_evidence_ids": [
+        "blk_kfz_c4"
+      ],
+      "observed_sum": "0.00",
+      "expected_value": "0.00",
+      "diff": "0.00",
+      "coverage": "complete",
+      "status": "verified",
+      "problem": null,
+      "contributions": [],
+      "exclusions": [],
+      "gaps": [],
+      "explanation": "No accepted or unresolved document in the supplied bundle can be materials; zero is verified within the closed supplied scope."
+    },
+    {
+      "entry_id": "col8",
+      "column": 8,
+      "label": "в т.ч. дополнительная заработная плата",
+      "unit": "руб.",
+      "category": "payroll_additional",
+      "reported_value": "193548.78",
+      "reported_evidence_ids": [
+        "blk_kfz_c8"
+      ],
+      "observed_sum": null,
+      "expected_value": null,
+      "diff": null,
+      "coverage": "none",
+      "status": "insufficient_evidence",
+      "problem": "no_supporting_document",
+      "contributions": [],
+      "exclusions": [],
+      "gaps": [
+        {
+          "code": "combined_line_not_split",
+          "message": "Payroll statements give additional payroll and leave reserve as one line (code 0202), so this column has no separate source.",
+          "evidence_ids": [
+            "blk_pay01_b7",
+            "blk_pay01_c7"
+          ],
+          "version_ids": [
+            "ver_pay01_v1"
+          ]
+        }
+      ],
+      "explanation": "Not verifiable from the supplied documents: no source states additional payroll separately."
+    },
+    {
+      "entry_id": "col15",
+      "column": 15,
+      "label": "Общепроизводственные затраты (Статья калькуляции 0800)",
+      "unit": "руб.",
+      "category": "production_overhead",
+      "reported_value": "1145798.10",
+      "reported_evidence_ids": [
+        "blk_kfz_c15"
+      ],
+      "observed_sum": "1133298.10",
+      "expected_value": "1133298.10",
+      "diff": "12500.00",
+      "coverage": "complete",
+      "status": "discrepancy",
+      "problem": "amount_mismatch",
+      "contributions": [
+        {
+          "version_id": "ver_act118_v1",
+          "label": "Акт № 118 от 28.01.2026",
+          "amount": "245000.00",
+          "category": "production_overhead",
+          "evidence_ids": [
+            "blk_act118_amount"
+          ]
+        },
+        {
+          "version_id": "ver_sa174_v1",
+          "label": "Счет-акт № 174 от 25.02.2026",
+          "amount": "318298.10",
+          "category": "production_overhead",
+          "evidence_ids": [
+            "blk_sa174_amount"
+          ]
+        },
+        {
+          "version_id": "ver_kl31_v1",
+          "label": "Служебная записка КЛ-31 от 10.04.2026",
+          "amount": "270000.00",
+          "category": "production_overhead",
+          "evidence_ids": [
+            "blk_kl31_amount"
+          ]
+        },
+        {
+          "version_id": "ver_upd77_v1",
+          "label": "УПД № 0426-77 от 22.05.2026",
+          "amount": "300000.00",
+          "category": "production_overhead",
+          "evidence_ids": [
+            "blk_upd77_amount"
+          ]
+        }
+      ],
+      "exclusions": [],
+      "gaps": [],
+      "explanation": "Four accepted sources total 1 133 298,10; the report shows 1 145 798,10, overstated by 12 500,00. No supplied document accounts for the difference."
+    },
+    {
+      "entry_id": "col16",
+      "column": 16,
+      "label": "Общехозяйственные затраты (Статья калькуляции 0900)",
+      "unit": "руб.",
+      "category": "administrative_overhead",
+      "reported_value": "3204744.51",
+      "reported_evidence_ids": [
+        "blk_kfz_c16"
+      ],
+      "observed_sum": "3204744.51",
+      "expected_value": "3204744.51",
+      "diff": "0.00",
+      "coverage": "complete",
+      "status": "verified",
+      "problem": null,
+      "contributions": [
+        {
+          "version_id": "ver_ia15_v1",
+          "label": "Акт № ИА-15 от 31.01.2026",
+          "amount": "620000.00",
+          "category": "administrative_overhead",
+          "evidence_ids": [
+            "blk_ia15_amount"
+          ]
+        },
+        {
+          "version_id": "ver_adm27_v1",
+          "label": "Акт № ADM-27 от 27.02.2026",
+          "amount": "487500.00",
+          "category": "administrative_overhead",
+          "evidence_ids": [
+            "blk_adm27_amount"
+          ]
+        },
+        {
+          "version_id": "ver_it0326_v1",
+          "label": "Справка о расходах ИТ 03-26",
+          "amount": "703244.51",
+          "category": "administrative_overhead",
+          "evidence_ids": [
+            "blk_it0326_t0r1c1"
+          ]
+        },
+        {
+          "version_id": "ver_sv0426_v1",
+          "label": "Акт № СВ-0426 от 29.04.2026",
+          "amount": "650000.00",
+          "category": "administrative_overhead",
+          "evidence_ids": [
+            "blk_sv0426_amount"
+          ]
+        },
+        {
+          "version_id": "ver_upr55_v1",
+          "label": "УПД № УПР-55 от 29.05.2026",
+          "amount": "744000.00",
+          "category": "administrative_overhead",
+          "evidence_ids": [
+            "blk_upr55_amount"
+          ]
+        }
+      ],
+      "exclusions": [
+        {
+          "version_id": "ver_adm27copy_v1",
+          "label": "Акт № ADM-27 от 27.02.2026 (копия)",
+          "reason": "duplicate",
+          "explanation": "Same file bytes (SHA-256) as Акт № ADM-27; counted once.",
+          "amount": "487500.00",
+          "duplicate_of": "ver_adm27_v1",
+          "evidence_ids": [
+            "blk_adm27copy_amount"
+          ]
+        },
+        {
+          "version_id": "ver_org0603_v1",
+          "label": "Акт № ОРГ-0603 от 03.06.2026",
+          "reason": "outside_period",
+          "explanation": "Services for June 2026, outside 2026-01-01..2026-05-31.",
+          "amount": "165000.00",
+          "duplicate_of": null,
+          "evidence_ids": [
+            "blk_org0603_date"
+          ]
+        },
+        {
+          "version_id": "ver_adm75_v1",
+          "label": "Акт № ADM-75 от 15.05.2026",
+          "reason": "other_contract",
+          "explanation": "Contract 24/03/16-02, not 24/03/15-01.",
+          "amount": "98000.00",
+          "duplicate_of": null,
+          "evidence_ids": [
+            "blk_adm75_contract"
+          ]
+        }
+      ],
+      "gaps": [],
+      "explanation": "Five accepted sources match the report; a duplicate copy, a June act and an act under another contract are excluded."
+    },
+    {
+      "entry_id": "col17",
+      "column": 17,
+      "label": "Итого",
+      "unit": "руб.",
+      "category": "total",
+      "reported_value": "11580377.40",
+      "reported_evidence_ids": [
+        "blk_kfz_c17"
+      ],
+      "observed_sum": "11567877.40",
+      "expected_value": "11567877.40",
+      "diff": "12500.00",
+      "coverage": "complete",
+      "status": "discrepancy",
+      "problem": "amount_mismatch",
+      "contributions": [],
+      "exclusions": [],
+      "gaps": [],
+      "explanation": "Columns 4, 5, 10, 15 and 16 from documents total 11 567 877,40. The 12 500,00 difference is the production-overhead discrepancy, not a second error."
+    }
+  ],
+  "exclusions": [
+    {
+      "version_id": "ver_adm27copy_v1",
+      "label": "Акт № ADM-27 от 27.02.2026 (копия)",
+      "reason": "duplicate",
+      "explanation": "Same file bytes (SHA-256) as Акт № ADM-27; counted once.",
+      "amount": "487500.00",
+      "duplicate_of": "ver_adm27_v1",
+      "evidence_ids": [
+        "blk_adm27copy_amount"
+      ]
+    },
+    {
+      "version_id": "ver_org0603_v1",
+      "label": "Акт № ОРГ-0603 от 03.06.2026",
+      "reason": "outside_period",
+      "explanation": "Services for June 2026, outside 2026-01-01..2026-05-31.",
+      "amount": "165000.00",
+      "duplicate_of": null,
+      "evidence_ids": [
+        "blk_org0603_date"
+      ]
+    },
+    {
+      "version_id": "ver_adm75_v1",
+      "label": "Акт № ADM-75 от 15.05.2026",
+      "reason": "other_contract",
+      "explanation": "Contract 24/03/16-02, not 24/03/15-01.",
+      "amount": "98000.00",
+      "duplicate_of": null,
+      "evidence_ids": [
+        "blk_adm75_contract"
+      ]
+    }
+  ],
+  "unresolved": [],
+  "conclusion": {
+    "component_discrepancies": [
+      {
+        "entry_id": "col15",
+        "diff": "12500.00",
+        "problem": "amount_mismatch",
+        "explanation": "Production overhead overstated by 12 500,00.",
+        "evidence_ids": [
+          "blk_kfz_c15"
+        ]
+      }
+    ],
+    "incomplete_indicators": [
+      "col8"
+    ],
+    "grand_total": {
+      "entry_id": "col17",
+      "status": "discrepancy",
+      "diff": "12500.00",
+      "explained_by": [
+        "col15"
+      ],
+      "unexplained_diff": "0.00"
+    },
+    "summary": "The report total is overstated by 12 500,00, all from production overhead (column 15). Detailed payroll split columns cannot be verified from the supplied documents."
+  }
+}

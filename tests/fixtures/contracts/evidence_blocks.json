@@ -1,0 +1,335 @@
+[
+  {
+    "version_id": "ver_kfz_v1",
+    "block_id": "blk_kfz_h15",
+    "text": "Общепроизводственные затраты (Статья калькуляции 0800) :",
+    "method": "ocr",
+    "locator": {
+      "kind": "page_region",
+      "page": 1,
+      "render_id": "art_kfz_p1",
+      "box": {
+        "x0": 2005,
+        "y0": 465,
+        "x1": 2222,
+        "y1": 527
+      },
+      "image_width": 2632,
+      "image_height": 1860,
+      "transform": {
+        "rotation": 0,
+        "dpi": 300,
+        "crop": null
+      }
+    },
+    "quality": {
+      "engine": "tesseract",
+      "confidence": null,
+      "language": "rus+eng"
+    },
+    "derived_from": null
+  },
+  {
+    "version_id": "ver_kfz_v1",
+    "block_id": "blk_kfz_c15",
+    "text": "1 145 798,10",
+    "method": "ocr",
+    "locator": {
+      "kind": "page_region",
+      "page": 1,
+      "render_id": "art_kfz_p1",
+      "box": {
+        "x0": 2050,
+        "y0": 842,
+        "x1": 2175,
+        "y1": 868
+      },
+      "image_width": 2632,
+      "image_height": 1860,
+      "transform": {
+        "rotation": 0,
+        "dpi": 300,
+        "crop": null
+      }
+    },
+    "quality": {
+      "engine": "tesseract",
+      "confidence": null,
+      "language": "rus+eng"
+    },
+    "derived_from": null
+  },
+  {
+    "version_id": "ver_sa174_v1",
+    "block_id": "blk_sa174_number",
+    "text": "СЧЕТ-АКТ № 174",
+    "method": "native_text",
+    "locator": {
+      "kind": "page_region",
+      "page": 1,
+      "render_id": "art_sa174_p1",
+      "box": {
+        "x0": 470,
+        "y0": 124,
+        "x1": 770,
+        "y1": 155
+      },
+      "image_width": 1240,
+      "image_height": 1754,
+      "transform": {
+        "rotation": 0,
+        "dpi": 150,
+        "crop": null
+      }
+    },
+    "quality": null,
+    "derived_from": null
+  },
+  {
+    "version_id": "ver_sa174_v1",
+    "block_id": "blk_sa174_date",
+    "text": "Дата 25.02.2026",
+    "method": "native_text",
+    "locator": {
+      "kind": "page_region",
+      "page": 1,
+      "render_id": "art_sa174_p1",
+      "box": {
+        "x0": 142,
+        "y0": 220,
+        "x1": 539,
+        "y1": 241
+      },
+      "image_width": 1240,
+      "image_height": 1754,
+      "transform": {
+        "rotation": 0,
+        "dpi": 150,
+        "crop": null
+      }
+    },
+    "quality": null,
+    "derived_from": null
+  },
+  {
+    "version_id": "ver_sa174_v1",
+    "block_id": "blk_sa174_contract",
+    "text": "Договор 24/03/15-01",
+    "method": "native_text",
+    "locator": {
+      "kind": "page_region",
+      "page": 1,
+      "render_id": "art_sa174_p1",
+      "box": {
+        "x0": 142,
+        "y0": 267,
+        "x1": 547,
+        "y1": 289
+      },
+      "image_width": 1240,
+      "image_height": 1754,
+      "transform": {
+        "rotation": 0,
+        "dpi": 150,
+        "crop": null
+      }
+    },
+    "quality": null,
+    "derived_from": null
+  },
+  {
+    "version_id": "ver_sa174_v1",
+    "block_id": "blk_sa174_vendor",
+    "text": "Исполнитель ООО «ИнжКонтур Бета»",
+    "method": "native_text",
+    "locator": {
+      "kind": "page_region",
+      "page": 1,
+      "render_id": "art_sa174_p1",
+      "box": {
+        "x0": 142,
+        "y0": 314,
+        "x1": 693,
+        "y1": 336
+      },
+      "image_width": 1240,
+      "image_height": 1754,
+      "transform": {
+        "rotation": 0,
+        "dpi": 150,
+        "crop": null
+      }
+    },
+    "quality": null,
+    "derived_from": null
+  },
+  {
+    "version_id": "ver_sa174_v1",
+    "block_id": "blk_sa174_desc",
+    "text": "Техническое обслуживание испытательного стенда, включая диагностику приводов, настройку\nизмерительных каналов и замену расходных элементов.",
+    "method": "native_text",
+    "locator": {
+      "kind": "page_region",
+      "page": 1,
+      "render_id": "art_sa174_p1",
+      "box": {
+        "x0": 142,
+        "y0": 426,
+        "x1": 1240,
+        "y1": 484
+      },
+      "image_width": 1240,
+      "image_height": 1754,
+      "transform": {
+        "rotation": 0,
+        "dpi": 150,
+        "crop": null
+      }
+    },
+    "quality": null,
+    "derived_from": null
+  },
+  {
+    "version_id": "ver_sa174_v1",
+    "block_id": "blk_sa174_amount",
+    "text": "К оплате по документу: 318 298,10 руб.",
+    "method": "native_text",
+    "locator": {
+      "kind": "page_region",
+      "page": 1,
+      "render_id": "art_sa174_p1",
+      "box": {
+        "x0": 142,
+        "y0": 509,
+        "x1": 605,
+        "y1": 531
+      },
+      "image_width": 1240,
+      "image_height": 1754,
+      "transform": {
+        "rotation": 0,
+        "dpi": 150,
+        "crop": null
+      }
+    },
+    "quality": null,
+    "derived_from": null
+  },
+  {
+    "version_id": "ver_sa174_v1",
+    "block_id": "blk_sa174_purpose",
+    "text": "Расходы относятся к обеспечению производственной деятельности по этапу 3.",
+    "method": "native_text",
+    "locator": {
+      "kind": "page_region",
+      "page": 1,
+      "render_id": "art_sa174_p1",
+      "box": {
+        "x0": 142,
+        "y0": 556,
+        "x1": 1070,
+        "y1": 578
+      },
+      "image_width": 1240,
+      "image_height": 1754,
+      "transform": {
+        "rotation": 0,
+        "dpi": 150,
+        "crop": null
+      }
+    },
+    "quality": null,
+    "derived_from": null
+  },
+  {
+    "version_id": "ver_pay01_v1",
+    "block_id": "blk_pay01_c6",
+    "text": "1010000",
+    "method": "spreadsheet",
+    "locator": {
+      "sheet": "Ведомость",
+      "ref": "C6",
+      "formula": null,
+      "cached_value": "1010000",
+      "derived_value": null,
+      "evaluation": "literal",
+      "inputs": [],
+      "kind": "cell"
+    },
+    "quality": null,
+    "derived_from": null
+  },
+  {
+    "version_id": "ver_pay01_v1",
+    "block_id": "blk_pay01_b7",
+    "text": "Дополнительная заработная плата и резерв отпусков",
+    "method": "spreadsheet",
+    "locator": {
+      "sheet": "Ведомость",
+      "ref": "B7",
+      "formula": null,
+      "cached_value": "Дополнительная заработная плата и резерв отпусков",
+      "derived_value": null,
+      "evaluation": "literal",
+      "inputs": [],
+      "kind": "cell"
+    },
+    "quality": null,
+    "derived_from": null
+  },
+  {
+    "version_id": "ver_pay01_v1",
+    "block_id": "blk_pay01_c7",
+    "text": "100000",
+    "method": "spreadsheet",
+    "locator": {
+      "sheet": "Ведомость",
+      "ref": "C7",
+      "formula": null,
+      "cached_value": "100000",
+      "derived_value": null,
+      "evaluation": "literal",
+      "inputs": [],
+      "kind": "cell"
+    },
+    "quality": null,
+    "derived_from": null
+  },
+  {
+    "version_id": "ver_pay01_v1",
+    "block_id": "blk_pay01_c8",
+    "text": "=SUM(C6:C7)",
+    "method": "spreadsheet",
+    "locator": {
+      "sheet": "Ведомость",
+      "ref": "C8",
+      "formula": "=SUM(C6:C7)",
+      "cached_value": null,
+      "derived_value": "1110000",
+      "evaluation": "derived",
+      "inputs": [
+        "C6",
+        "C7"
+      ],
+      "kind": "cell"
+    },
+    "quality": null,
+    "derived_from": null
+  },
+  {
+    "version_id": "ver_it0326_v1",
+    "block_id": "blk_it0326_t0r1c1",
+    "text": "703 244,51",
+    "method": "docx",
+    "locator": {
+      "kind": "docx",
+      "quote": "703 244,51",
+      "paragraph": null,
+      "table": 0,
+      "row": 1,
+      "cell": 1
+    },
+    "quality": null,
+    "derived_from": null
+  }
+]

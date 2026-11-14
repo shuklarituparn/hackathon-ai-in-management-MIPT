@@ -1,0 +1,202 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="4000" height="3000" viewBox="0 0 4000 3000" role="img" aria-labelledby="title desc">
+<title id="title">Task dependencies and parallel workstreams</title>
+<desc id="desc">Sixteen task cards show owners and all start and closing prerequisites. Core arrows omit transitive links. Optional interpretation review is separate and only affects release if shipped.</desc>
+<metadata id="dependency-data">{&quot;tasks&quot;: {&quot;T01&quot;: {&quot;owner&quot;: &quot;Aadi&quot;, &quot;title&quot;: [&quot;Contracts + runnable skeleton&quot;], &quot;hours&quot;: &quot;1.5h&quot;, &quot;start&quot;: [], &quot;close&quot;: []}, &quot;T02&quot;: {&quot;owner&quot;: &quot;Aadi&quot;, &quot;title&quot;: [&quot;Storage + API&quot;], &quot;hours&quot;: &quot;3h&quot;, &quot;start&quot;: [&quot;T01&quot;], &quot;close&quot;: []}, &quot;T03&quot;: {&quot;owner&quot;: &quot;Eva&quot;, &quot;title&quot;: [&quot;Versioned evidence&quot;], &quot;hours&quot;: &quot;1.5h&quot;, &quot;start&quot;: [&quot;T01&quot;], &quot;close&quot;: []}, &quot;T04&quot;: {&quot;owner&quot;: &quot;Eva&quot;, &quot;title&quot;: [&quot;Prepare PDF / PNG /&quot;, &quot;DOCX / XLSX&quot;], &quot;hours&quot;: &quot;3h&quot;, &quot;start&quot;: [&quot;T03&quot;], &quot;close&quot;: []}, &quot;T05&quot;: {&quot;owner&quot;: &quot;Eva&quot;, &quot;title&quot;: [&quot;Page / crop / cell&quot;, &quot;inspection tools&quot;], &quot;hours&quot;: &quot;2h&quot;, &quot;start&quot;: [&quot;T03&quot;], &quot;close&quot;: []}, &quot;T06&quot;: {&quot;owner&quot;: &quot;Eva&quot;, &quot;title&quot;: [&quot;Extraction instructions&quot;, &quot;+ validation&quot;], &quot;hours&quot;: &quot;3.5h&quot;, &quot;start&quot;: [&quot;T03&quot;], &quot;close&quot;: []}, &quot;T07&quot;: {&quot;owner&quot;: &quot;Eva&quot;, &quot;title&quot;: [&quot;Dataset + fixtures&quot;], &quot;hours&quot;: &quot;2h&quot;, &quot;start&quot;: [&quot;T01&quot;], &quot;close&quot;: []}, &quot;T08&quot;: {&quot;owner&quot;: &quot;Guillermo&quot;, &quot;title&quot;: [&quot;Bounded harness&quot;], &quot;hours&quot;: &quot;4h&quot;, &quot;start&quot;: [&quot;T01&quot;], &quot;close&quot;: []}, &quot;T09&quot;: {&quot;owner&quot;: &quot;Guillermo&quot;, &quot;title&quot;: [&quot;Chat + evidence UI&quot;], &quot;hours&quot;: &quot;4h&quot;, &quot;start&quot;: [&quot;T01&quot;], &quot;close&quot;: []}, &quot;T10&quot;: {&quot;owner&quot;: &quot;Aadi&quot;, &quot;title&quot;: [&quot;Reconcile facts&quot;], &quot;hours&quot;: &quot;4h&quot;, &quot;start&quot;: [&quot;T01&quot;], &quot;close&quot;: []}, &quot;T11&quot;: {&quot;owner&quot;: &quot;Aadi&quot;, &quot;title&quot;: [&quot;Connect the complete live run&quot;], &quot;hours&quot;: &quot;1.5h&quot;, &quot;start&quot;: [&quot;T02&quot;, &quot;T04&quot;, &quot;T05&quot;, &quot;T06&quot;, &quot;T08&quot;, &quot;T10&quot;], &quot;close&quot;: []}, &quot;T12&quot;: {&quot;owner&quot;: &quot;Aadi&quot;, &quot;title&quot;: [&quot;Local Docker startup&quot;], &quot;hours&quot;: &quot;2h&quot;, &quot;start&quot;: [&quot;T01&quot;], &quot;close&quot;: [&quot;T09&quot;, &quot;T11&quot;]}, &quot;T13&quot;: {&quot;owner&quot;: &quot;Guillermo&quot;, &quot;title&quot;: [&quot;README + architecture&quot;], &quot;hours&quot;: &quot;2h&quot;, &quot;start&quot;: [&quot;T01&quot;], &quot;close&quot;: [&quot;T09&quot;, &quot;T11&quot;, &quot;T12&quot;]}, &quot;T14&quot;: {&quot;owner&quot;: &quot;Guillermo&quot;, &quot;title&quot;: [&quot;Live demo + reference run&quot;], &quot;hours&quot;: &quot;1h&quot;, &quot;start&quot;: [&quot;T07&quot;], &quot;close&quot;: [&quot;T09&quot;, &quot;T11&quot;, &quot;T12&quot;]}, &quot;T15&quot;: {&quot;owner&quot;: &quot;Guillermo&quot;, &quot;title&quot;: [&quot;Confirm an interpretation&quot;], &quot;hours&quot;: &quot;1h optional&quot;, &quot;start&quot;: [&quot;T02&quot;, &quot;T06&quot;, &quot;T08&quot;, &quot;T09&quot;, &quot;T11&quot;], &quot;close&quot;: [], &quot;optional&quot;: true}, &quot;T16&quot;: {&quot;owner&quot;: &quot;All&quot;, &quot;title&quot;: [&quot;Release checks, fixes and submission&quot;], &quot;hours&quot;: &quot;4h each&quot;, &quot;start&quot;: [&quot;T07&quot;, &quot;T09&quot;, &quot;T11&quot;, &quot;T12&quot;, &quot;T13&quot;, &quot;T14&quot;], &quot;close&quot;: [], &quot;conditional&quot;: [&quot;T15&quot;]}}, &quot;edges&quot;: [{&quot;source&quot;: &quot;T01&quot;, &quot;target&quot;: &quot;T02&quot;, &quot;kind&quot;: &quot;start&quot;}, {&quot;source&quot;: &quot;T01&quot;, &quot;target&quot;: &quot;T03&quot;, &quot;kind&quot;: &quot;start&quot;}, {&quot;source&quot;: &quot;T03&quot;, &quot;target&quot;: &quot;T04&quot;, &quot;kind&quot;: &quot;start&quot;}, {&quot;source&quot;: &quot;T03&quot;, &quot;target&quot;: &quot;T05&quot;, &quot;kind&quot;: &quot;start&quot;}, {&quot;source&quot;: &quot;T03&quot;, &quot;target&quot;: &quot;T06&quot;, &quot;kind&quot;: &quot;start&quot;}, {&quot;source&quot;: &quot;T01&quot;, &quot;target&quot;: &quot;T07&quot;, &quot;kind&quot;: &quot;start&quot;}, {&quot;source&quot;: &quot;T01&quot;, &quot;target&quot;: &quot;T08&quot;, &quot;kind&quot;: &quot;start&quot;}, {&quot;source&quot;: &quot;T01&quot;, &quot;target&quot;: &quot;T09&quot;, &quot;kind&quot;: &quot;start&quot;}, {&quot;source&quot;: &quot;T01&quot;, &quot;target&quot;: &quot;T10&quot;, &quot;kind&quot;: &quot;start&quot;}, {&quot;source&quot;: &quot;T02&quot;, &quot;target&quot;: &quot;T11&quot;, &quot;kind&quot;: &quot;start&quot;}, {&quot;source&quot;: &quot;T04&quot;, &quot;target&quot;: &quot;T11&quot;, &quot;kind&quot;: &quot;start&quot;}, {&quot;source&quot;: &quot;T05&quot;, &quot;target&quot;: &quot;T11&quot;, &quot;kind&quot;: &quot;start&quot;}, {&quot;source&quot;: &quot;T06&quot;, &quot;target&quot;: &quot;T11&quot;, &quot;kind&quot;: &quot;start&quot;}, {&quot;source&quot;: &quot;T08&quot;, &quot;target&quot;: &quot;T11&quot;, &quot;kind&quot;: &quot;start&quot;}, {&quot;source&quot;: &quot;T10&quot;, &quot;target&quot;: &quot;T11&quot;, &quot;kind&quot;: &quot;start&quot;}, {&quot;source&quot;: &quot;T01&quot;, &quot;target&quot;: &quot;T12&quot;, &quot;kind&quot;: &quot;start&quot;}, {&quot;source&quot;: &quot;T09&quot;, &quot;target&quot;: &quot;T12&quot;, &quot;kind&quot;: &quot;close&quot;}, {&quot;source&quot;: &quot;T11&quot;, &quot;target&quot;: &quot;T12&quot;, &quot;kind&quot;: &quot;close&quot;}, {&quot;source&quot;: &quot;T01&quot;, &quot;target&quot;: &quot;T13&quot;, &quot;kind&quot;: &quot;start&quot;}, {&quot;source&quot;: &quot;T09&quot;, &quot;target&quot;: &quot;T13&quot;, &quot;kind&quot;: &quot;close&quot;}, {&quot;source&quot;: &quot;T11&quot;, &quot;target&quot;: &quot;T13&quot;, &quot;kind&quot;: &quot;close&quot;}, {&quot;source&quot;: &quot;T12&quot;, &quot;target&quot;: &quot;T13&quot;, &quot;kind&quot;: &quot;close&quot;}, {&quot;source&quot;: &quot;T07&quot;, &quot;target&quot;: &quot;T14&quot;, &quot;kind&quot;: &quot;start&quot;}, {&quot;source&quot;: &quot;T09&quot;, &quot;target&quot;: &quot;T14&quot;, &quot;kind&quot;: &quot;close&quot;}, {&quot;source&quot;: &quot;T11&quot;, &quot;target&quot;: &quot;T14&quot;, &quot;kind&quot;: &quot;close&quot;}, {&quot;source&quot;: &quot;T12&quot;, &quot;target&quot;: &quot;T14&quot;, &quot;kind&quot;: &quot;close&quot;}, {&quot;source&quot;: &quot;T02&quot;, &quot;target&quot;: &quot;T15&quot;, &quot;kind&quot;: &quot;start&quot;}, {&quot;source&quot;: &quot;T06&quot;, &quot;target&quot;: &quot;T15&quot;, &quot;kind&quot;: &quot;start&quot;}, {&quot;source&quot;: &quot;T08&quot;, &quot;target&quot;: &quot;T15&quot;, &quot;kind&quot;: &quot;start&quot;}, {&quot;source&quot;: &quot;T09&quot;, &quot;target&quot;: &quot;T15&quot;, &quot;kind&quot;: &quot;start&quot;}, {&quot;source&quot;: &quot;T11&quot;, &quot;target&quot;: &quot;T15&quot;, &quot;kind&quot;: &quot;start&quot;}, {&quot;source&quot;: &quot;T07&quot;, &quot;target&quot;: &quot;T16&quot;, &quot;kind&quot;: &quot;start&quot;}, {&quot;source&quot;: &quot;T09&quot;, &quot;target&quot;: &quot;T16&quot;, &quot;kind&quot;: &quot;start&quot;}, {&quot;source&quot;: &quot;T11&quot;, &quot;target&quot;: &quot;T16&quot;, &quot;kind&quot;: &quot;start&quot;}, {&quot;source&quot;: &quot;T12&quot;, &quot;target&quot;: &quot;T16&quot;, &quot;kind&quot;: &quot;start&quot;}, {&quot;source&quot;: &quot;T13&quot;, &quot;target&quot;: &quot;T16&quot;, &quot;kind&quot;: &quot;start&quot;}, {&quot;source&quot;: &quot;T14&quot;, &quot;target&quot;: &quot;T16&quot;, &quot;kind&quot;: &quot;start&quot;}, {&quot;source&quot;: &quot;T15&quot;, &quot;target&quot;: &quot;T16&quot;, &quot;kind&quot;: &quot;if_shipped&quot;}], &quot;core_edge_policy&quot;: &quot;transitive_reduction&quot;, &quot;optional_panel&quot;: &quot;T15 prerequisites listed on card; release conditional&quot;}</metadata>
+<defs>
+<marker id="arrow-3465B4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="15" markerHeight="15" markerUnits="userSpaceOnUse" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#3465B4"/></marker>
+<marker id="arrow-8391A6" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="15" markerHeight="15" markerUnits="userSpaceOnUse" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#8391A6"/></marker>
+<marker id="arrow-A66C1E" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="15" markerHeight="15" markerUnits="userSpaceOnUse" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#A66C1E"/></marker>
+<marker id="arrow-F8FAFD" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="15" markerHeight="15" markerUnits="userSpaceOnUse" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#F8FAFD"/></marker>
+</defs>
+<rect x="0" y="0" width="4000" height="3000" rx="0" fill="#F8FAFD"/>
+<text x="100" y="125.48" font-family="Arial,sans-serif" font-size="72" font-weight="700" fill="#17263D">Task dependencies</text>
+<text x="104" y="188.56" font-family="Arial,sans-serif" font-size="34" font-weight="400" fill="#53647A">Asynchronous work and artifact handoffs — same task IDs as the backlog</text>
+<rect x="105" y="231" width="28" height="28" rx="7" fill="#3465B4"/>
+<text x="151" y="250.36" font-family="Arial,sans-serif" font-size="29" font-weight="700" fill="#17263D">Eva</text>
+<rect x="420" y="231" width="28" height="28" rx="7" fill="#23755B"/>
+<text x="466" y="250.36" font-family="Arial,sans-serif" font-size="29" font-weight="700" fill="#17263D">Aadi</text>
+<rect x="735" y="231" width="28" height="28" rx="7" fill="#7256B8"/>
+<text x="781" y="250.36" font-family="Arial,sans-serif" font-size="29" font-weight="700" fill="#17263D">Guillermo</text>
+<text x="1260" y="250.36" font-family="Arial,sans-serif" font-size="29" font-weight="400" fill="#53647A">Solid arrows: core handoffs. Dashed: only if shipped.</text>
+<polyline points="2000,510 2000,560 380,560" fill="none" stroke="#F8FAFD" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="2000,510 2000,560 380,560" fill="none" stroke="#8391A6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="2000,560 3620,560" fill="none" stroke="#F8FAFD" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="2000,560 3620,560" fill="none" stroke="#8391A6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="380,560 380,632" fill="none" stroke="#F8FAFD" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="380,560 380,632" fill="none" stroke="#8391A6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-8391A6)"/>
+<polyline points="1028,560 1028,632" fill="none" stroke="#F8FAFD" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1028,560 1028,632" fill="none" stroke="#8391A6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-8391A6)"/>
+<polyline points="1676,560 1676,632" fill="none" stroke="#F8FAFD" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1676,560 1676,632" fill="none" stroke="#8391A6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-8391A6)"/>
+<polyline points="2324,560 2324,632" fill="none" stroke="#F8FAFD" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="2324,560 2324,632" fill="none" stroke="#8391A6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-8391A6)"/>
+<polyline points="2972,560 2972,632" fill="none" stroke="#F8FAFD" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="2972,560 2972,632" fill="none" stroke="#8391A6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-8391A6)"/>
+<polyline points="3620,560 3620,632" fill="none" stroke="#F8FAFD" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="3620,560 3620,632" fill="none" stroke="#8391A6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-8391A6)"/>
+<polyline points="1028,880 1028,1050 1098,1050" fill="none" stroke="#F8FAFD" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1028,880 1028,1050 1098,1050" fill="none" stroke="#3465B4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1098,1050 2898,1050" fill="none" stroke="#F8FAFD" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1098,1050 2898,1050" fill="none" stroke="#3465B4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1098,1050 1098,1112" fill="none" stroke="#F8FAFD" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1098,1050 1098,1112" fill="none" stroke="#3465B4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-3465B4)"/>
+<polyline points="1998,1050 1998,1112" fill="none" stroke="#F8FAFD" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1998,1050 1998,1112" fill="none" stroke="#3465B4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-3465B4)"/>
+<polyline points="2898,1050 2898,1112" fill="none" stroke="#F8FAFD" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="2898,1050 2898,1112" fill="none" stroke="#3465B4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-3465B4)"/>
+<polyline points="1676,880 1676,950 1530,950 1530,1562" fill="none" stroke="#F8FAFD" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1676,880 1676,950 1530,950 1530,1562" fill="none" stroke="#8391A6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-8391A6)"/>
+<polyline points="2324,880 2324,980 2440,980 2440,1562" fill="none" stroke="#F8FAFD" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="2324,880 2324,980 2440,980 2440,1562" fill="none" stroke="#8391A6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-8391A6)"/>
+<polyline points="2972,880 2972,980 3370,980 3370,1690 3218,1690" fill="none" stroke="#F8FAFD" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="2972,880 2972,980 3370,980 3370,1690 3218,1690" fill="none" stroke="#8391A6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-8391A6)"/>
+<polyline points="1098,1380 1098,1495 1200,1495 1200,1562" fill="none" stroke="#F8FAFD" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1098,1380 1098,1495 1200,1495 1200,1562" fill="none" stroke="#3465B4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-3465B4)"/>
+<polyline points="1998,1380 1998,1562" fill="none" stroke="#F8FAFD" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1998,1380 1998,1562" fill="none" stroke="#3465B4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-3465B4)"/>
+<polyline points="2898,1380 2898,1495 2800,1495 2800,1562" fill="none" stroke="#F8FAFD" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="2898,1380 2898,1495 2800,1495 2800,1562" fill="none" stroke="#3465B4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-3465B4)"/>
+<polyline points="1200,1800 1200,1910 400,1910 400,1962" fill="none" stroke="#F8FAFD" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1200,1800 1200,1910 400,1910 400,1962" fill="none" stroke="#8391A6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-8391A6)"/>
+<polyline points="3620,880 3620,930 3940,930 3940,1850 800,1850 800,1962" fill="none" stroke="#F8FAFD" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="3620,880 3620,930 3940,930 3940,1850 800,1850 800,1962" fill="none" stroke="#8391A6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-8391A6)"/>
+<polyline points="1100,2110 1342,2110" fill="none" stroke="#F8FAFD" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1100,2110 1342,2110" fill="none" stroke="#8391A6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-8391A6)"/>
+<polyline points="600,2240 600,2340 3120,2340 3120,2258" fill="none" stroke="#F8FAFD" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="600,2240 600,2340 3120,2340 3120,2258" fill="none" stroke="#8391A6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-8391A6)"/>
+<polyline points="100,765 60,765 60,2410 3720,2410 3720,2110 3638,2110" fill="none" stroke="#F8FAFD" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="100,765 60,765 60,2410 3720,2410 3720,2110 3638,2110" fill="none" stroke="#3465B4" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-3465B4)"/>
+<polyline points="1860,2240 1860,2460 2040,2460 2040,2552" fill="none" stroke="#F8FAFD" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1860,2240 1860,2460 2040,2460 2040,2552" fill="none" stroke="#8391A6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-8391A6)"/>
+<polyline points="3400,2240 3400,2460 3250,2460 3250,2552" fill="none" stroke="#F8FAFD" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="3400,2240 3400,2460 3250,2460 3250,2552" fill="none" stroke="#8391A6" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-8391A6)"/>
+<polyline points="1150,2690 1482,2690" fill="none" stroke="#F8FAFD" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1150,2690 1482,2690" fill="none" stroke="#A66C1E" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10" marker-end="url(#arrow-A66C1E)"/>
+<text x="1200" y="2658.68" font-family="Arial,sans-serif" font-size="27" font-weight="400" fill="#A66C1E">if shipped</text>
+<rect x="1440" y="310" width="1120" height="200" rx="22" fill="#EDF7F2" stroke="#D6DEEA" stroke-width="2"/>
+<rect x="1440" y="310" width="8" height="200" rx="3" fill="#23755B"/>
+<text x="1468" y="358.56" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#23755B">T01</text>
+<text x="1575" y="359.36" font-family="Arial,sans-serif" font-size="29" font-weight="700" fill="#17263D">Aadi</text>
+<text x="2410" y="356.00" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#53647A">1.5h</text>
+<text x="1468" y="418.92" font-family="Arial,sans-serif" font-size="38" font-weight="700" fill="#17263D">Contracts + runnable skeleton</text>
+<text x="1468" y="472.36" font-family="Arial,sans-serif" font-size="29" font-weight="400" fill="#53647A">Start: none</text>
+<text x="110" y="540.52" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="#53647A">BUILD IN PARALLEL AFTER CONTRACTS</text>
+<rect x="100" y="650" width="560" height="230" rx="22" fill="#EDF4FD" stroke="#D6DEEA" stroke-width="2"/>
+<rect x="100" y="650" width="8" height="230" rx="3" fill="#3465B4"/>
+<text x="128" y="698.56" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#3465B4">T07</text>
+<text x="235" y="699.36" font-family="Arial,sans-serif" font-size="29" font-weight="700" fill="#17263D">Eva</text>
+<text x="510" y="696.00" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#53647A">2h</text>
+<text x="128" y="753.04" font-family="Arial,sans-serif" font-size="31" font-weight="700" fill="#17263D">Dataset + fixtures</text>
+<text x="128" y="841.84" font-family="Arial,sans-serif" font-size="26" font-weight="400" fill="#53647A">Start: T01</text>
+<rect x="748" y="650" width="560" height="230" rx="22" fill="#EDF4FD" stroke="#D6DEEA" stroke-width="2"/>
+<rect x="748" y="650" width="8" height="230" rx="3" fill="#3465B4"/>
+<text x="776" y="698.56" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#3465B4">T03</text>
+<text x="883" y="699.36" font-family="Arial,sans-serif" font-size="29" font-weight="700" fill="#17263D">Eva</text>
+<text x="1158" y="696.00" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#53647A">1.5h</text>
+<text x="776" y="753.04" font-family="Arial,sans-serif" font-size="31" font-weight="700" fill="#17263D">Versioned evidence</text>
+<text x="776" y="841.84" font-family="Arial,sans-serif" font-size="26" font-weight="400" fill="#53647A">Start: T01</text>
+<rect x="1396" y="650" width="560" height="230" rx="22" fill="#EDF7F2" stroke="#D6DEEA" stroke-width="2"/>
+<rect x="1396" y="650" width="8" height="230" rx="3" fill="#23755B"/>
+<text x="1424" y="698.56" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#23755B">T02</text>
+<text x="1531" y="699.36" font-family="Arial,sans-serif" font-size="29" font-weight="700" fill="#17263D">Aadi</text>
+<text x="1806" y="696.00" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#53647A">3h</text>
+<text x="1424" y="753.04" font-family="Arial,sans-serif" font-size="31" font-weight="700" fill="#17263D">Storage + API</text>
+<text x="1424" y="841.84" font-family="Arial,sans-serif" font-size="26" font-weight="400" fill="#53647A">Start: T01</text>
+<rect x="2044" y="650" width="560" height="230" rx="22" fill="#EDF7F2" stroke="#D6DEEA" stroke-width="2"/>
+<rect x="2044" y="650" width="8" height="230" rx="3" fill="#23755B"/>
+<text x="2072" y="698.56" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#23755B">T10</text>
+<text x="2179" y="699.36" font-family="Arial,sans-serif" font-size="29" font-weight="700" fill="#17263D">Aadi</text>
+<text x="2454" y="696.00" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#53647A">4h</text>
+<text x="2072" y="753.04" font-family="Arial,sans-serif" font-size="31" font-weight="700" fill="#17263D">Reconcile facts</text>
+<text x="2072" y="841.84" font-family="Arial,sans-serif" font-size="26" font-weight="400" fill="#53647A">Start: T01</text>
+<rect x="2692" y="650" width="560" height="230" rx="22" fill="#F1EDFA" stroke="#D6DEEA" stroke-width="2"/>
+<rect x="2692" y="650" width="8" height="230" rx="3" fill="#7256B8"/>
+<text x="2720" y="698.56" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#7256B8">T08</text>
+<text x="2827" y="699.36" font-family="Arial,sans-serif" font-size="29" font-weight="700" fill="#17263D">Guillermo</text>
+<text x="3102" y="696.00" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#53647A">4h</text>
+<text x="2720" y="753.04" font-family="Arial,sans-serif" font-size="31" font-weight="700" fill="#17263D">Bounded harness</text>
+<text x="2720" y="841.84" font-family="Arial,sans-serif" font-size="26" font-weight="400" fill="#53647A">Start: T01</text>
+<rect x="3340" y="650" width="560" height="230" rx="22" fill="#F1EDFA" stroke="#D6DEEA" stroke-width="2"/>
+<rect x="3340" y="650" width="8" height="230" rx="3" fill="#7256B8"/>
+<text x="3368" y="698.56" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#7256B8">T09</text>
+<text x="3475" y="699.36" font-family="Arial,sans-serif" font-size="29" font-weight="700" fill="#17263D">Guillermo</text>
+<text x="3750" y="696.00" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#53647A">4h</text>
+<text x="3368" y="753.04" font-family="Arial,sans-serif" font-size="31" font-weight="700" fill="#17263D">Chat + evidence UI</text>
+<text x="3368" y="841.84" font-family="Arial,sans-serif" font-size="26" font-weight="400" fill="#53647A">Start: T01</text>
+<text x="110" y="1033.52" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="#53647A">EVIDENCE TOOLS</text>
+<rect x="748" y="1130" width="700" height="250" rx="22" fill="#EDF4FD" stroke="#D6DEEA" stroke-width="2"/>
+<rect x="748" y="1130" width="8" height="250" rx="3" fill="#3465B4"/>
+<text x="776" y="1178.56" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#3465B4">T04</text>
+<text x="883" y="1179.36" font-family="Arial,sans-serif" font-size="29" font-weight="700" fill="#17263D">Eva</text>
+<text x="1298" y="1176.00" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#53647A">3h</text>
+<text x="776" y="1233.04" font-family="Arial,sans-serif" font-size="31" font-weight="700" fill="#17263D">Prepare PDF / PNG /</text>
+<text x="776" y="1273.04" font-family="Arial,sans-serif" font-size="31" font-weight="700" fill="#17263D">DOCX / XLSX</text>
+<text x="776" y="1321.84" font-family="Arial,sans-serif" font-size="26" font-weight="400" fill="#53647A">Start: T03</text>
+<rect x="1648" y="1130" width="700" height="250" rx="22" fill="#EDF4FD" stroke="#D6DEEA" stroke-width="2"/>
+<rect x="1648" y="1130" width="8" height="250" rx="3" fill="#3465B4"/>
+<text x="1676" y="1178.56" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#3465B4">T05</text>
+<text x="1783" y="1179.36" font-family="Arial,sans-serif" font-size="29" font-weight="700" fill="#17263D">Eva</text>
+<text x="2198" y="1176.00" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#53647A">2h</text>
+<text x="1676" y="1233.04" font-family="Arial,sans-serif" font-size="31" font-weight="700" fill="#17263D">Page / crop / cell</text>
+<text x="1676" y="1273.04" font-family="Arial,sans-serif" font-size="31" font-weight="700" fill="#17263D">inspection tools</text>
+<text x="1676" y="1321.84" font-family="Arial,sans-serif" font-size="26" font-weight="400" fill="#53647A">Start: T03</text>
+<rect x="2548" y="1130" width="700" height="250" rx="22" fill="#EDF4FD" stroke="#D6DEEA" stroke-width="2"/>
+<rect x="2548" y="1130" width="8" height="250" rx="3" fill="#3465B4"/>
+<text x="2576" y="1178.56" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#3465B4">T06</text>
+<text x="2683" y="1179.36" font-family="Arial,sans-serif" font-size="29" font-weight="700" fill="#17263D">Eva</text>
+<text x="3098" y="1176.00" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#53647A">3.5h</text>
+<text x="2576" y="1233.04" font-family="Arial,sans-serif" font-size="31" font-weight="700" fill="#17263D">Extraction instructions</text>
+<text x="2576" y="1273.04" font-family="Arial,sans-serif" font-size="31" font-weight="700" fill="#17263D">+ validation</text>
+<text x="2576" y="1321.84" font-family="Arial,sans-serif" font-size="26" font-weight="400" fill="#53647A">Start: T03</text>
+<rect x="800" y="1580" width="2400" height="220" rx="22" fill="#EDF7F2" stroke="#D6DEEA" stroke-width="2"/>
+<rect x="800" y="1580" width="8" height="220" rx="3" fill="#23755B"/>
+<text x="828" y="1628.56" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#23755B">T11</text>
+<text x="935" y="1629.36" font-family="Arial,sans-serif" font-size="29" font-weight="700" fill="#17263D">Aadi</text>
+<text x="3050" y="1626.00" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#53647A">1.5h</text>
+<text x="828" y="1688.92" font-family="Arial,sans-serif" font-size="38" font-weight="700" fill="#17263D">Connect the complete live run</text>
+<text x="828" y="1742.36" font-family="Arial,sans-serif" font-size="29" font-weight="400" fill="#53647A">Start: T02, T04, T05, T06, T08, T10</text>
+<text x="828" y="1785.68" font-family="Arial,sans-serif" font-size="27" font-weight="400" fill="#53647A">First field-to-chat integration happens earlier, while these tasks are in progress.</text>
+<text x="110" y="1853.52" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="#53647A">DELIVERY HANDOFFS</text>
+<rect x="100" y="1980" width="1000" height="260" rx="22" fill="#EDF7F2" stroke="#D6DEEA" stroke-width="2"/>
+<rect x="100" y="1980" width="8" height="260" rx="3" fill="#23755B"/>
+<text x="128" y="2028.56" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#23755B">T12</text>
+<text x="235" y="2029.36" font-family="Arial,sans-serif" font-size="29" font-weight="700" fill="#17263D">Aadi</text>
+<text x="950" y="2026.00" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#53647A">2h</text>
+<text x="128" y="2083.04" font-family="Arial,sans-serif" font-size="31" font-weight="700" fill="#17263D">Local Docker startup</text>
+<text x="128" y="2171.84" font-family="Arial,sans-serif" font-size="26" font-weight="400" fill="#53647A">Start: T01 (start early)</text>
+<text x="128" y="2210.84" font-family="Arial,sans-serif" font-size="26" font-weight="400" fill="#53647A">Close: T09, T11</text>
+<rect x="1360" y="1980" width="1000" height="260" rx="22" fill="#F1EDFA" stroke="#D6DEEA" stroke-width="2"/>
+<rect x="1360" y="1980" width="8" height="260" rx="3" fill="#7256B8"/>
+<text x="1388" y="2028.56" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#7256B8">T13</text>
+<text x="1495" y="2029.36" font-family="Arial,sans-serif" font-size="29" font-weight="700" fill="#17263D">Guillermo</text>
+<text x="2210" y="2026.00" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#53647A">2h</text>
+<text x="1388" y="2083.04" font-family="Arial,sans-serif" font-size="31" font-weight="700" fill="#17263D">README + architecture</text>
+<text x="1388" y="2171.84" font-family="Arial,sans-serif" font-size="26" font-weight="400" fill="#53647A">Start: T01 (start early)</text>
+<text x="1388" y="2210.84" font-family="Arial,sans-serif" font-size="26" font-weight="400" fill="#53647A">Close: T09, T11, T12</text>
+<rect x="2620" y="1980" width="1000" height="260" rx="22" fill="#F1EDFA" stroke="#D6DEEA" stroke-width="2"/>
+<rect x="2620" y="1980" width="8" height="260" rx="3" fill="#7256B8"/>
+<text x="2648" y="2028.56" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#7256B8">T14</text>
+<text x="2755" y="2029.36" font-family="Arial,sans-serif" font-size="29" font-weight="700" fill="#17263D">Guillermo</text>
+<text x="3470" y="2026.00" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#53647A">1h</text>
+<text x="2648" y="2083.04" font-family="Arial,sans-serif" font-size="31" font-weight="700" fill="#17263D">Live demo + reference run</text>
+<text x="2648" y="2171.84" font-family="Arial,sans-serif" font-size="26" font-weight="400" fill="#53647A">Start: T07</text>
+<text x="2648" y="2210.84" font-family="Arial,sans-serif" font-size="26" font-weight="400" fill="#53647A">Close: T09, T11, T12</text>
+<rect x="100" y="2570" width="1050" height="240" rx="22" fill="#FFF8EC" stroke="#D6DEEA" stroke-width="2"/>
+<rect x="100" y="2570" width="8" height="240" rx="3" fill="#A66C1E"/>
+<text x="128" y="2618.56" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#A66C1E">T15</text>
+<text x="235" y="2619.36" font-family="Arial,sans-serif" font-size="29" font-weight="700" fill="#17263D">Guillermo</text>
+<text x="965" y="2616.00" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#53647A">1h optional</text>
+<text x="128" y="2673.04" font-family="Arial,sans-serif" font-size="31" font-weight="700" fill="#17263D">Confirm an interpretation</text>
+<text x="128" y="2719.84" font-family="Arial,sans-serif" font-size="26" font-weight="400" fill="#53647A">Start: T02, T06, T08, T09, T11</text>
+<text x="128" y="2763.68" font-family="Arial,sans-serif" font-size="27" font-weight="700" fill="#A66C1E">Does not block core release</text>
+<rect x="1500" y="2570" width="2400" height="240" rx="22" fill="#E8EDF5" stroke="#D6DEEA" stroke-width="2"/>
+<rect x="1500" y="2570" width="8" height="240" rx="3" fill="#1D304E"/>
+<text x="1528" y="2618.56" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#1D304E">T16</text>
+<text x="1635" y="2619.36" font-family="Arial,sans-serif" font-size="29" font-weight="700" fill="#17263D">Eva + Aadi + Guillermo</text>
+<text x="3750" y="2616.00" font-family="Arial,sans-serif" font-size="25" font-weight="400" fill="#53647A">4h each</text>
+<text x="1528" y="2678.92" font-family="Arial,sans-serif" font-size="38" font-weight="700" fill="#17263D">Release checks, fixes and submission</text>
+<text x="1528" y="2732.36" font-family="Arial,sans-serif" font-size="29" font-weight="400" fill="#53647A">Start: T07, T09, T11, T12, T13, T14</text>
+<text x="1528" y="2776.52" font-family="Arial,sans-serif" font-size="28" font-weight="400" fill="#53647A">Core gates pass; submit by 14 Nov 22:00 Istanbul. Official cutoff: 23:59.</text>
+<text x="104" y="2894.36" font-family="Arial,sans-serif" font-size="29" font-weight="400" fill="#53647A">Start / Close depend on ready artifacts, not meetings. Owners can work at different times.</text>
+<text x="104" y="2942.68" font-family="Arial,sans-serif" font-size="27" font-weight="400" fill="#53647A">Arrows omit prerequisites implied by another path; cards list every prerequisite. Optional T15 has its own start list.</text>
+</svg>

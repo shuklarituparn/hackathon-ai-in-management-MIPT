@@ -1,0 +1,4 @@
+# Optional: browser checks for the chat interface (tests/test_ui_browser.py). Not installed in Docker or CI.
+# An installed Chrome or Edge is used; otherwise run `python -m playwright install chromium` once.
+-r requirements-dev.txt
+playwright==1.65.2

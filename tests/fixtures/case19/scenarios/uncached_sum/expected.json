@@ -1,0 +1,74 @@
+{
+  "description": "The supplied January payroll statement stores =SUM(C6:C7) without a cached result. Preparation must keep the formula and derive 1 110 000,00 with Decimal from C6 and C7 (V04). No replacement file: the original already has this property.",
+  "validation": [
+    "V04"
+  ],
+  "inputs": {},
+  "expected_preparation": {
+    "02_01_Ведомость_ЗП_Январь_2026.xlsx": {
+      "cell": {
+        "sheet": "Ведомость",
+        "ref": "C8",
+        "formula": "=SUM(C6:C7)",
+        "cached_value": null,
+        "derived_value": "1110000.00",
+        "evaluation": "derived",
+        "inputs": [
+          "C6:C7"
+        ]
+      }
+    }
+  },
+  "typed": "recon_fixtures.items()",
+  "expected": {
+    "status_counts": {
+      "verified": 5,
+      "discrepancy": 2,
+      "insufficient_evidence": 8
+    },
+    "indicators": {
+      "col5": {
+        "status": "verified",
+        "problem": null,
+        "coverage": "complete",
+        "observed_sum": "5558474.83",
+        "expected_value": "5558474.83",
+        "diff": "0.00"
+      }
+    },
+    "exclusions": [
+      {
+        "fixture": "adm27copy",
+        "reason": "duplicate",
+        "duplicate_of": "adm27"
+      },
+      {
+        "fixture": "org0603",
+        "reason": "outside_period"
+      },
+      {
+        "fixture": "adm75",
+        "reason": "other_contract"
+      }
+    ],
+    "unresolved": [],
+    "conclusion": {
+      "component_discrepancies": [
+        {
+          "entry_id": "col15",
+          "diff": "12500.00",
+          "problem": "amount_mismatch"
+        }
+      ],
+      "grand_total": {
+        "entry_id": "col17",
+        "status": "discrepancy",
+        "diff": "12500.00",
+        "explained_by": [
+          "col15"
+        ],
+        "unexplained_diff": "0.00"
+      }
+    }
+  }
+}

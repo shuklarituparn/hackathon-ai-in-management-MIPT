@@ -1,0 +1,14 @@
+{
+  "description": "Every input renamed to a neutral name. Filenames are metadata only, so the result must equal V01 (V03, V10).",
+  "validation": [
+    "V03",
+    "V10"
+  ],
+  "inputs": {
+    "rename": "neutral"
+  },
+  "typed": "recon_fixtures.items() with every original_filename replaced",
+  "expected": {
+    "same_as": "baseline"
+  }
+}

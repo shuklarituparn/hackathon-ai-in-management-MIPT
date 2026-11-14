@@ -1,0 +1,88 @@
+{
+  "description": "Act 174 is truncated after 2 KB and an empty file is added. Both stay visible as unreadable; since their relevance is unknown, no indicator can be verified (V03, V06).",
+  "validation": [
+    "V03",
+    "V06"
+  ],
+  "inputs": {
+    "replace": [
+      "05_Счет-акт_174_25-02-2026.pdf"
+    ],
+    "add": [
+      "16_Акт_пустой.pdf"
+    ]
+  },
+  "expected_preparation": {
+    "05_Счет-акт_174_25-02-2026.pdf": "unreadable",
+    "16_Акт_пустой.pdf": "unreadable"
+  },
+  "typed": "sa174 and empty16 with preparation 'failed' and no extraction",
+  "expected": {
+    "status_counts": {
+      "verified": 0,
+      "discrepancy": 0,
+      "insufficient_evidence": 15
+    },
+    "indicators": {
+      "col4": {
+        "status": "insufficient_evidence",
+        "problem": "unreadable_input",
+        "coverage": "none",
+        "observed_sum": null,
+        "expected_value": null,
+        "diff": null
+      },
+      "col15": {
+        "status": "insufficient_evidence",
+        "problem": "unreadable_input",
+        "coverage": "partial",
+        "observed_sum": "815000.00",
+        "expected_value": null,
+        "diff": null
+      },
+      "col17": {
+        "status": "insufficient_evidence",
+        "problem": "unreadable_input",
+        "coverage": "partial",
+        "observed_sum": "11249579.30",
+        "expected_value": null,
+        "diff": null
+      }
+    },
+    "exclusions": [
+      {
+        "fixture": "adm27copy",
+        "reason": "duplicate",
+        "duplicate_of": "adm27"
+      },
+      {
+        "fixture": "org0603",
+        "reason": "outside_period"
+      },
+      {
+        "fixture": "adm75",
+        "reason": "other_contract"
+      }
+    ],
+    "unresolved": [
+      {
+        "fixture": "sa174",
+        "possible_categories": []
+      },
+      {
+        "fixture": "empty16",
+        "possible_categories": []
+      }
+    ],
+    "conclusion": {
+      "component_discrepancies": [],
+      "grand_total": {
+        "entry_id": "col17",
+        "status": "insufficient_evidence",
+        "diff": null,
+        "explained_by": [],
+        "unexplained_diff": null
+      }
+    }
+  }
+}

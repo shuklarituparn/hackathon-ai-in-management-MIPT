@@ -1,0 +1,13 @@
+{
+  "description": "The inputs uploaded in reverse order. Order must not change any result (V07).",
+  "validation": [
+    "V07"
+  ],
+  "inputs": {
+    "order": "reversed"
+  },
+  "typed": "recon_fixtures.items() and the manifest in reverse order",
+  "expected": {
+    "same_as": "baseline"
+  }
+}

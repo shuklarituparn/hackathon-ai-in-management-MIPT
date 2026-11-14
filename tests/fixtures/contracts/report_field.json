@@ -1,0 +1,22 @@
+{
+  "entry_id": "col15",
+  "label": "Общепроизводственные затраты (Статья калькуляции 0800)",
+  "column": 15,
+  "unit": "руб.",
+  "label_evidence_ids": [
+    "blk_kfz_h15"
+  ],
+  "category": "production_overhead",
+  "components": [],
+  "observation": {
+    "state": "accepted",
+    "value": "1145798.10",
+    "source_text": "1 145 798,10",
+    "evidence_ids": [
+      "blk_kfz_c15"
+    ],
+    "basis": "observed",
+    "findings": [],
+    "reason": null
+  }
+}

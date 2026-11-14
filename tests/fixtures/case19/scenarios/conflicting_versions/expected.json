@@ -1,0 +1,76 @@
+{
+  "description": "A separate upload of act № 174 of 25.02.2026 (same contract and contractor) with a different amount, 381 298,10, and no replacement link. Neither version may be chosen silently (policy 3).",
+  "validation": [
+    "V07"
+  ],
+  "inputs": {
+    "add": [
+      "16_Счет-акт_174_исправленный.docx"
+    ]
+  },
+  "typed": "plus act 174 again as sa174fix with amount 381298.10",
+  "expected": {
+    "status_counts": {
+      "verified": 5,
+      "discrepancy": 0,
+      "insufficient_evidence": 10
+    },
+    "indicators": {
+      "col15": {
+        "status": "insufficient_evidence",
+        "problem": "conflicting_versions",
+        "coverage": "partial",
+        "observed_sum": "815000.00",
+        "expected_value": null,
+        "diff": null
+      },
+      "col17": {
+        "status": "insufficient_evidence",
+        "problem": "conflicting_versions",
+        "coverage": "partial",
+        "observed_sum": "11249579.30",
+        "expected_value": null,
+        "diff": null
+      }
+    },
+    "exclusions": [
+      {
+        "fixture": "adm27copy",
+        "reason": "duplicate",
+        "duplicate_of": "adm27"
+      },
+      {
+        "fixture": "org0603",
+        "reason": "outside_period"
+      },
+      {
+        "fixture": "adm75",
+        "reason": "other_contract"
+      }
+    ],
+    "unresolved": [
+      {
+        "fixture": "sa174",
+        "possible_categories": [
+          "production_overhead"
+        ]
+      },
+      {
+        "fixture": "sa174fix",
+        "possible_categories": [
+          "production_overhead"
+        ]
+      }
+    ],
+    "conclusion": {
+      "component_discrepancies": [],
+      "grand_total": {
+        "entry_id": "col17",
+        "status": "insufficient_evidence",
+        "diff": null,
+        "explained_by": [],
+        "unexplained_diff": null
+      }
+    }
+  }
+}

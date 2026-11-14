@@ -1,0 +1,85 @@
+{
+  "description": "The March payroll statement is missing. Payroll and the total stay partial with no delta; the overhead error is still reported (V02).",
+  "validation": [
+    "V02"
+  ],
+  "inputs": {
+    "remove": [
+      "02_03_Ведомость_ЗП_Март_2026.xlsx"
+    ]
+  },
+  "typed": "recon_fixtures.without('pay03')",
+  "expected": {
+    "status_counts": {
+      "verified": 3,
+      "discrepancy": 1,
+      "insufficient_evidence": 11
+    },
+    "indicators": {
+      "col5": {
+        "status": "insufficient_evidence",
+        "problem": "missing_coverage",
+        "coverage": "partial",
+        "observed_sum": "4456674.83",
+        "expected_value": null,
+        "diff": null
+      },
+      "col10": {
+        "status": "verified",
+        "problem": null,
+        "coverage": "complete",
+        "observed_sum": "1671359.96",
+        "expected_value": "1671359.96",
+        "diff": "0.00"
+      },
+      "col15": {
+        "status": "discrepancy",
+        "problem": "amount_mismatch",
+        "coverage": "complete",
+        "observed_sum": "1133298.10",
+        "expected_value": "1133298.10",
+        "diff": "12500.00"
+      },
+      "col17": {
+        "status": "insufficient_evidence",
+        "problem": "missing_coverage",
+        "coverage": "partial",
+        "observed_sum": "10466077.40",
+        "expected_value": null,
+        "diff": null
+      }
+    },
+    "exclusions": [
+      {
+        "fixture": "adm27copy",
+        "reason": "duplicate",
+        "duplicate_of": "adm27"
+      },
+      {
+        "fixture": "org0603",
+        "reason": "outside_period"
+      },
+      {
+        "fixture": "adm75",
+        "reason": "other_contract"
+      }
+    ],
+    "unresolved": [],
+    "conclusion": {
+      "component_discrepancies": [
+        {
+          "entry_id": "col15",
+          "diff": "12500.00",
+          "problem": "amount_mismatch"
+        }
+      ],
+      "grand_total": {
+        "entry_id": "col17",
+        "status": "insufficient_evidence",
+        "diff": null,
+        "explained_by": [],
+        "unexplained_diff": null
+      }
+    }
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "description": "Act ПС-201 prints 350,00. A proposal of 550,00 must not be accepted, and 350 must never become 550 (V05).",
+  "validation": [
+    "V05"
+  ],
+  "inputs": {
+    "add": [
+      "16_Акт_ПС-201.docx"
+    ]
+  },
+  "expected_extraction": {
+    "amount": {
+      "accepted_value": "350.00",
+      "source_text": "350,00",
+      "never": [
+        "550.00"
+      ]
+    }
+  },
+  "variants": {
+    "amount_unresolved": {
+      "typed": "plus ps201 with the amount unresolved (the model proposed 550, the validator refused it)",
+      "expected": {
+        "status_counts": {
+          "verified": 5,
+          "discrepancy": 0,
+          "insufficient_evidence": 10
+        },
+        "indicators": {
+          "col15": {
+            "status": "insufficient_evidence",
+            "problem": "unresolved_interpretation",
+            "coverage": "partial",
+            "observed_sum": "1133298.10",
+            "expected_value": null,
+            "diff": null
+          },
+          "col17": {
+            "status": "insufficient_evidence",
+            "problem": "unresolved_interpretation",
+            "coverage": "partial",
+            "observed_sum": "11567877.40",
+            "expected_value": null,
+            "diff": null
+          }
+        },
+        "exclusions": [
+          {
+            "fixture": "adm27copy",
+            "reason": "duplicate",
+            "duplicate_of": "adm27"
+          },
+          {
+            "fixture": "org0603",
+            "reason": "outside_period"
+          },
+          {
+            "fixture": "adm75",
+            "reason": "other_contract"
+          }
+        ],
+        "unresolved": [
+          {
+            "fixture": "ps201",
+            "possible_categories": [
+              "production_overhead"
+            ]
+          }
+        ],
+        "conclusion": {
+          "component_discrepancies": [],
+          "grand_total": {
+            "entry_id": "col17",
+            "status": "insufficient_evidence",
+            "diff": null,
+            "explained_by": [],
+            "unexplained_diff": null
+          }
+        }
+      }
+    },
+    "amount_350": {
+      "typed": "plus ps201 accepted at 350.00",
+      "expected": {
+        "status_counts": {
+          "verified": 5,
+          "discrepancy": 2,
+          "insufficient_evidence": 8
+        },
+        "indicators": {
+          "col15": {
+            "status": "discrepancy",
+            "problem": "amount_mismatch",
+            "coverage": "complete",
+            "observed_sum": "1133648.10",
+            "expected_value": "1133648.10",
+            "diff": "12150.00"
+          },
+          "col17": {
+            "status": "discrepancy",
+            "problem": "amount_mismatch",
+            "coverage": "complete",
+            "observed_sum": "11568227.40",
+            "expected_value": "11568227.40",
+            "diff": "12150.00"
+          }
+        },
+        "exclusions": [
+          {
+            "fixture": "adm27copy",
+            "reason": "duplicate",
+            "duplicate_of": "adm27"
+          },
+          {
+            "fixture": "org0603",
+            "reason": "outside_period"
+          },
+          {
+            "fixture": "adm75",
+            "reason": "other_contract"
+          }
+        ],
+        "unresolved": [],
+        "conclusion": {
+          "component_discrepancies": [
+            {
+              "entry_id": "col15",
+              "diff": "12150.00",
+              "problem": "amount_mismatch"
+            }
+          ],
+          "grand_total": {
+            "entry_id": "col17",
+            "status": "discrepancy",
+            "diff": "12150.00",
+            "explained_by": [
+              "col15"
+            ],
+            "unexplained_diff": "0.00"
+          }
+        }
+      }
+    }
+  }
+}

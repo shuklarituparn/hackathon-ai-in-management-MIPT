@@ -1,0 +1,73 @@
+{
+  "description": "Act 174 replaced by an image-only scan of the same page turned 90° counter-clockwise (no text layer). Preparation must OCR it, record the clockwise turn it applied (RenderTransform.rotation = 90) and keep boxes on the stored render; the amount and result stay as in V01 (V03).",
+  "validation": [
+    "V03"
+  ],
+  "inputs": {
+    "replace": [
+      "05_Счет-акт_174_25-02-2026.pdf"
+    ]
+  },
+  "expected_preparation": {
+    "05_Счет-акт_174_25-02-2026.pdf": {
+      "text_layer": false,
+      "pages": 1,
+      "transform": {
+        "rotation": 90
+      },
+      "amount_text": "318 298,10"
+    }
+  },
+  "typed": "recon_fixtures.items() (the extraction is unchanged)",
+  "expected": {
+    "status_counts": {
+      "verified": 5,
+      "discrepancy": 2,
+      "insufficient_evidence": 8
+    },
+    "indicators": {
+      "col15": {
+        "status": "discrepancy",
+        "problem": "amount_mismatch",
+        "coverage": "complete",
+        "observed_sum": "1133298.10",
+        "expected_value": "1133298.10",
+        "diff": "12500.00"
+      }
+    },
+    "exclusions": [
+      {
+        "fixture": "adm27copy",
+        "reason": "duplicate",
+        "duplicate_of": "adm27"
+      },
+      {
+        "fixture": "org0603",
+        "reason": "outside_period"
+      },
+      {
+        "fixture": "adm75",
+        "reason": "other_contract"
+      }
+    ],
+    "unresolved": [],
+    "conclusion": {
+      "component_discrepancies": [
+        {
+          "entry_id": "col15",
+          "diff": "12500.00",
+          "problem": "amount_mismatch"
+        }
+      ],
+      "grand_total": {
+        "entry_id": "col17",
+        "status": "discrepancy",
+        "diff": "12500.00",
+        "explained_by": [
+          "col15"
+        ],
+        "unexplained_diff": "0.00"
+      }
+    }
+  }
+}

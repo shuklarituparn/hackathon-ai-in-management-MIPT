@@ -1,0 +1,80 @@
+{
+  "description": "A second copy of act 174, uploaded as a replacement version of the same document (same document_id, predecessor = the original). Only the newer version counts; the original stays accessible as superseded.",
+  "validation": [
+    "V07",
+    "V10"
+  ],
+  "inputs": {
+    "add": [
+      "05_Счет-акт_174_25-02-2026_v2.pdf"
+    ],
+    "replaces": {
+      "05_Счет-акт_174_25-02-2026_v2.pdf": "05_Счет-акт_174_25-02-2026.pdf"
+    }
+  },
+  "typed": "plus act 174 as version sa174v2 with predecessor ver_sa174",
+  "expected": {
+    "status_counts": {
+      "verified": 5,
+      "discrepancy": 2,
+      "insufficient_evidence": 8
+    },
+    "indicators": {
+      "col15": {
+        "status": "discrepancy",
+        "problem": "amount_mismatch",
+        "coverage": "complete",
+        "observed_sum": "1133298.10",
+        "expected_value": "1133298.10",
+        "diff": "12500.00"
+      },
+      "col17": {
+        "status": "discrepancy",
+        "problem": "amount_mismatch",
+        "coverage": "complete",
+        "observed_sum": "11567877.40",
+        "expected_value": "11567877.40",
+        "diff": "12500.00"
+      }
+    },
+    "exclusions": [
+      {
+        "fixture": "sa174",
+        "reason": "duplicate",
+        "duplicate_of": "sa174v2"
+      },
+      {
+        "fixture": "adm27copy",
+        "reason": "duplicate",
+        "duplicate_of": "adm27"
+      },
+      {
+        "fixture": "org0603",
+        "reason": "outside_period"
+      },
+      {
+        "fixture": "adm75",
+        "reason": "other_contract"
+      }
+    ],
+    "unresolved": [],
+    "conclusion": {
+      "component_discrepancies": [
+        {
+          "entry_id": "col15",
+          "diff": "12500.00",
+          "problem": "amount_mismatch"
+        }
+      ],
+      "grand_total": {
+        "entry_id": "col17",
+        "status": "discrepancy",
+        "diff": "12500.00",
+        "explained_by": [
+          "col15"
+        ],
+        "unexplained_diff": "0.00"
+      }
+    }
+  }
+}

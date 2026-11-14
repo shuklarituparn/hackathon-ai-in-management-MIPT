@@ -1,0 +1,738 @@
+{
+  "case_id": "case19",
+  "inputs_dir": "examples/case19",
+  "note": "Test oracle only. Never copy this file into examples/ or pass its expected values to the agent. Typed values mirror tests/recon_fixtures.py; test_case19_fixtures.py checks that they agree.",
+  "report": {
+    "file": "01_Карточка_учета_фактических_затрат_этап_3.pdf",
+    "format": "pdf",
+    "scan": true,
+    "row_label": "3 этап, 2026 г.",
+    "contract": "24/03/15-01",
+    "period": {
+      "from": "2026-01-01",
+      "to": "2026-05-31"
+    },
+    "expected_verified_columns": [
+      4,
+      5,
+      7,
+      10,
+      16
+    ],
+    "expected_discrepancy_columns": [
+      15,
+      17
+    ],
+    "expected_insufficient_columns": [
+      3,
+      6,
+      8,
+      9,
+      11,
+      12,
+      13,
+      14
+    ],
+    "expected_discrepancy_amount": "12500.00"
+  },
+  "primaries": [
+    {
+      "file": "02_01_Ведомость_ЗП_Январь_2026.xlsx",
+      "format": "xlsx",
+      "fixture": "pay01",
+      "scan": false,
+      "expected_status": "accepted",
+      "expected": {
+        "doc_type": "Расчетная ведомость",
+        "number": "ВЕД-ЗП-2026-01",
+        "contracts": [
+          "24/03/15-01"
+        ],
+        "counterparty": null,
+        "issue_date": null,
+        "service_period": {
+          "from": "2026-01-01",
+          "to": "2026-01-31"
+        },
+        "amount": "1110000.00",
+        "allocations": [
+          {
+            "line_label": "0201 Основная заработная плата",
+            "category": "payroll_main",
+            "amount": "1010000.00"
+          },
+          {
+            "line_label": "0202 Дополнительная зарплата и резерв",
+            "category": "payroll_total",
+            "amount": "100000.00",
+            "possible_categories": [
+              "payroll_additional",
+              "leave_reserve"
+            ]
+          },
+          {
+            "line_label": "ИТОГО",
+            "category": "payroll_total",
+            "amount": "1110000.00"
+          }
+        ]
+      }
+    },
+    {
+      "file": "02_02_Ведомость_ЗП_Февраль_2026.xlsx",
+      "format": "xlsx",
+      "fixture": "pay02",
+      "scan": false,
+      "expected_status": "accepted",
+      "expected": {
+        "doc_type": "Расчетная ведомость",
+        "number": "ВЕД-ЗП-2026-02",
+        "contracts": [
+          "24/03/15-01"
+        ],
+        "counterparty": null,
+        "issue_date": null,
+        "service_period": {
+          "from": "2026-02-01",
+          "to": "2026-02-28"
+        },
+        "amount": "1117000.00",
+        "allocations": [
+          {
+            "line_label": "0201 Основная заработная плата",
+            "category": "payroll_main",
+            "amount": "1015500.00"
+          },
+          {
+            "line_label": "0202 Дополнительная зарплата и резерв",
+            "category": "payroll_total",
+            "amount": "101500.00",
+            "possible_categories": [
+              "payroll_additional",
+              "leave_reserve"
+            ]
+          },
+          {
+            "line_label": "ИТОГО",
+            "category": "payroll_total",
+            "amount": "1117000.00"
+          }
+        ]
+      }
+    },
+    {
+      "file": "02_03_Ведомость_ЗП_Март_2026.xlsx",
+      "format": "xlsx",
+      "fixture": "pay03",
+      "scan": false,
+      "expected_status": "accepted",
+      "expected": {
+        "doc_type": "Расчетная ведомость",
+        "number": "ВЕД-ЗП-2026-03",
+        "contracts": [
+          "24/03/15-01"
+        ],
+        "counterparty": null,
+        "issue_date": null,
+        "service_period": {
+          "from": "2026-03-01",
+          "to": "2026-03-31"
+        },
+        "amount": "1101800.00",
+        "allocations": [
+          {
+            "line_label": "0201 Основная заработная плата",
+            "category": "payroll_main",
+            "amount": "1002300.00"
+          },
+          {
+            "line_label": "0202 Дополнительная зарплата и резерв",
+            "category": "payroll_total",
+            "amount": "99500.00",
+            "possible_categories": [
+              "payroll_additional",
+              "leave_reserve"
+            ]
+          },
+          {
+            "line_label": "ИТОГО",
+            "category": "payroll_total",
+            "amount": "1101800.00"
+          }
+        ]
+      }
+    },
+    {
+      "file": "02_04_Ведомость_ЗП_Апрель_2026.xlsx",
+      "format": "xlsx",
+      "fixture": "pay04",
+      "scan": false,
+      "expected_status": "accepted",
+      "expected": {
+        "doc_type": "Расчетная ведомость",
+        "number": "ВЕД-ЗП-2026-04",
+        "contracts": [
+          "24/03/15-01"
+        ],
+        "counterparty": null,
+        "issue_date": null,
+        "service_period": {
+          "from": "2026-04-01",
+          "to": "2026-04-30"
+        },
+        "amount": "1120750.00",
+        "allocations": [
+          {
+            "line_label": "0201 Основная заработная плата",
+            "category": "payroll_main",
+            "amount": "1018750.00"
+          },
+          {
+            "line_label": "0202 Дополнительная зарплата и резерв",
+            "category": "payroll_total",
+            "amount": "102000.00",
+            "possible_categories": [
+              "payroll_additional",
+              "leave_reserve"
+            ]
+          },
+          {
+            "line_label": "ИТОГО",
+            "category": "payroll_total",
+            "amount": "1120750.00"
+          }
+        ]
+      }
+    },
+    {
+      "file": "02_05_Ведомость_ЗП_Май_2026.xlsx",
+      "format": "xlsx",
+      "fixture": "pay05",
+      "scan": false,
+      "expected_status": "accepted",
+      "expected": {
+        "doc_type": "Расчетная ведомость",
+        "number": "ВЕД-ЗП-2026-05",
+        "contracts": [
+          "24/03/15-01"
+        ],
+        "counterparty": null,
+        "issue_date": null,
+        "service_period": {
+          "from": "2026-05-01",
+          "to": "2026-05-31"
+        },
+        "amount": "1108924.83",
+        "allocations": [
+          {
+            "line_label": "0201 Основная заработная плата",
+            "category": "payroll_main",
+            "amount": "1007920.26"
+          },
+          {
+            "line_label": "0202 Дополнительная зарплата и резерв",
+            "category": "payroll_total",
+            "amount": "101004.57",
+            "possible_categories": [
+              "payroll_additional",
+              "leave_reserve"
+            ]
+          },
+          {
+            "line_label": "ИТОГО",
+            "category": "payroll_total",
+            "amount": "1108924.83"
+          }
+        ]
+      }
+    },
+    {
+      "file": "03_01_Страховые_взносы_Январь_2026.xlsx",
+      "format": "xlsx",
+      "fixture": "con01",
+      "scan": false,
+      "expected_status": "accepted",
+      "expected": {
+        "doc_type": "Расчет страховых взносов",
+        "number": "ВЗН-2026-01",
+        "contracts": [
+          "24/03/15-01"
+        ],
+        "counterparty": null,
+        "issue_date": null,
+        "service_period": {
+          "from": "2026-01-01",
+          "to": "2026-01-31"
+        },
+        "amount": "333000.00",
+        "allocations": [
+          {
+            "line_label": "0300 Начислено взносов",
+            "category": "contributions_total",
+            "amount": "333000.00",
+            "possible_categories": [
+              "contributions_main",
+              "contributions_additional",
+              "contributions_reserve"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "file": "03_02_Страховые_взносы_Февраль_2026.xlsx",
+      "format": "xlsx",
+      "fixture": "con02",
+      "scan": false,
+      "expected_status": "accepted",
+      "expected": {
+        "doc_type": "Расчет страховых взносов",
+        "number": "ВЗН-2026-02",
+        "contracts": [
+          "24/03/15-01"
+        ],
+        "counterparty": null,
+        "issue_date": null,
+        "service_period": {
+          "from": "2026-02-01",
+          "to": "2026-02-28"
+        },
+        "amount": "335100.00",
+        "allocations": [
+          {
+            "line_label": "0300 Начислено взносов",
+            "category": "contributions_total",
+            "amount": "335100.00",
+            "possible_categories": [
+              "contributions_main",
+              "contributions_additional",
+              "contributions_reserve"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "file": "03_03_Страховые_взносы_Март_2026.xlsx",
+      "format": "xlsx",
+      "fixture": "con03",
+      "scan": false,
+      "expected_status": "accepted",
+      "expected": {
+        "doc_type": "Расчет страховых взносов",
+        "number": "ВЗН-2026-03",
+        "contracts": [
+          "24/03/15-01"
+        ],
+        "counterparty": null,
+        "issue_date": null,
+        "service_period": {
+          "from": "2026-03-01",
+          "to": "2026-03-31"
+        },
+        "amount": "330540.00",
+        "allocations": [
+          {
+            "line_label": "0300 Начислено взносов",
+            "category": "contributions_total",
+            "amount": "330540.00",
+            "possible_categories": [
+              "contributions_main",
+              "contributions_additional",
+              "contributions_reserve"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "file": "03_04_Страховые_взносы_Апрель_2026.xlsx",
+      "format": "xlsx",
+      "fixture": "con04",
+      "scan": false,
+      "expected_status": "accepted",
+      "expected": {
+        "doc_type": "Расчет страховых взносов",
+        "number": "ВЗН-2026-04",
+        "contracts": [
+          "24/03/15-01"
+        ],
+        "counterparty": null,
+        "issue_date": null,
+        "service_period": {
+          "from": "2026-04-01",
+          "to": "2026-04-30"
+        },
+        "amount": "337225.00",
+        "allocations": [
+          {
+            "line_label": "0300 Начислено взносов",
+            "category": "contributions_total",
+            "amount": "337225.00",
+            "possible_categories": [
+              "contributions_main",
+              "contributions_additional",
+              "contributions_reserve"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "file": "03_05_Страховые_взносы_Май_2026.xlsx",
+      "format": "xlsx",
+      "fixture": "con05",
+      "scan": false,
+      "expected_status": "accepted",
+      "expected": {
+        "doc_type": "Расчет страховых взносов",
+        "number": "ВЗН-2026-05",
+        "contracts": [
+          "24/03/15-01"
+        ],
+        "counterparty": null,
+        "issue_date": null,
+        "service_period": {
+          "from": "2026-05-01",
+          "to": "2026-05-31"
+        },
+        "amount": "335494.96",
+        "allocations": [
+          {
+            "line_label": "0300 Начислено взносов",
+            "category": "contributions_total",
+            "amount": "335494.96",
+            "possible_categories": [
+              "contributions_main",
+              "contributions_additional",
+              "contributions_reserve"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "file": "04_Акт_118_28-01-2026.pdf",
+      "format": "pdf",
+      "fixture": "act118",
+      "scan": true,
+      "expected_status": "accepted",
+      "expected": {
+        "doc_type": "Акт",
+        "number": "118",
+        "contracts": [
+          "24/03/15-01"
+        ],
+        "counterparty": "ООО «ЛабСервис Альфа»",
+        "issue_date": "2026-01-28",
+        "service_period": {
+          "from": "2026-01-01",
+          "to": "2026-01-31"
+        },
+        "amount": "245000.00",
+        "allocations": [
+          {
+            "line_label": null,
+            "category": "production_overhead",
+            "amount": "245000.00"
+          }
+        ]
+      }
+    },
+    {
+      "file": "05_Счет-акт_174_25-02-2026.pdf",
+      "format": "pdf",
+      "fixture": "sa174",
+      "scan": false,
+      "expected_status": "accepted",
+      "expected": {
+        "doc_type": "Счет-акт",
+        "number": "174",
+        "contracts": [
+          "24/03/15-01"
+        ],
+        "counterparty": "ООО «ИнжКонтур Бета»",
+        "issue_date": "2026-02-25",
+        "service_period": null,
+        "amount": "318298.10",
+        "allocations": [
+          {
+            "line_label": null,
+            "category": "production_overhead",
+            "amount": "318298.10"
+          }
+        ]
+      }
+    },
+    {
+      "file": "06_Служебная_записка_КЛ-31.docx",
+      "format": "docx",
+      "fixture": "kl31",
+      "scan": false,
+      "expected_status": "accepted",
+      "expected": {
+        "doc_type": "Служебная записка",
+        "number": "КЛ-31",
+        "contracts": [
+          "24/03/15-01"
+        ],
+        "counterparty": null,
+        "issue_date": "2026-04-10",
+        "service_period": null,
+        "amount": "270000.00",
+        "allocations": [
+          {
+            "line_label": null,
+            "category": "production_overhead",
+            "amount": "270000.00"
+          }
+        ]
+      }
+    },
+    {
+      "file": "07_УПД_0426-77.pdf",
+      "format": "pdf",
+      "fixture": "upd77",
+      "scan": false,
+      "expected_status": "accepted",
+      "expected": {
+        "doc_type": "УПД",
+        "number": "0426-77",
+        "contracts": [
+          "24/03/15-01"
+        ],
+        "counterparty": "ООО «СпецАренда Гамма»",
+        "issue_date": "2026-05-22",
+        "service_period": null,
+        "amount": "300000.00",
+        "allocations": [
+          {
+            "line_label": null,
+            "category": "production_overhead",
+            "amount": "300000.00"
+          }
+        ]
+      }
+    },
+    {
+      "file": "08_Акт_ИА-15_31-01-2026.pdf",
+      "format": "pdf",
+      "fixture": "ia15",
+      "scan": true,
+      "expected_status": "accepted",
+      "expected": {
+        "doc_type": "Акт",
+        "number": "ИА-15",
+        "contracts": [
+          "24/03/15-01"
+        ],
+        "counterparty": "ООО «Аналитика Дельта»",
+        "issue_date": "2026-01-31",
+        "service_period": null,
+        "amount": "620000.00",
+        "allocations": [
+          {
+            "line_label": null,
+            "category": "administrative_overhead",
+            "amount": "620000.00"
+          }
+        ]
+      }
+    },
+    {
+      "file": "09_Акт_ADM-27_27-02-2026.pdf",
+      "format": "pdf",
+      "fixture": "adm27",
+      "scan": false,
+      "expected_status": "accepted",
+      "expected": {
+        "doc_type": "Акт",
+        "number": "ADM-27",
+        "contracts": [
+          "24/03/15-01"
+        ],
+        "counterparty": "ООО «ДокКонтур Эпсилон»",
+        "issue_date": "2026-02-27",
+        "service_period": null,
+        "amount": "487500.00",
+        "allocations": [
+          {
+            "line_label": null,
+            "category": "administrative_overhead",
+            "amount": "487500.00"
+          }
+        ]
+      }
+    },
+    {
+      "file": "10_Акт_ADM-27_копия.pdf",
+      "format": "pdf",
+      "fixture": "adm27copy",
+      "scan": false,
+      "expected_status": "excluded",
+      "expected_exclusion_reason": "duplicate",
+      "duplicate_of": "09_Акт_ADM-27_27-02-2026.pdf",
+      "expected": {
+        "doc_type": "Акт",
+        "number": "ADM-27",
+        "contracts": [
+          "24/03/15-01"
+        ],
+        "counterparty": "ООО «ДокКонтур Эпсилон»",
+        "issue_date": "2026-02-27",
+        "service_period": null,
+        "amount": "487500.00",
+        "allocations": [
+          {
+            "line_label": null,
+            "category": "administrative_overhead",
+            "amount": "487500.00"
+          }
+        ]
+      }
+    },
+    {
+      "file": "11_Справка_ИТ_03-26.docx",
+      "format": "docx",
+      "fixture": "it0326",
+      "scan": false,
+      "expected_status": "accepted",
+      "expected": {
+        "doc_type": "Справка о расходах ИТ",
+        "number": "03-26",
+        "contracts": [
+          "24/03/15-01"
+        ],
+        "counterparty": null,
+        "issue_date": null,
+        "service_period": {
+          "from": "2026-03-01",
+          "to": "2026-03-31"
+        },
+        "amount": "703244.51",
+        "allocations": [
+          {
+            "line_label": null,
+            "category": "administrative_overhead",
+            "amount": "703244.51"
+          }
+        ]
+      }
+    },
+    {
+      "file": "12_Акт_связь_0426.png",
+      "format": "png",
+      "fixture": "sv0426",
+      "scan": true,
+      "expected_status": "accepted",
+      "expected": {
+        "doc_type": "Акт",
+        "number": "СВ-0426",
+        "contracts": [
+          "24/03/15-01"
+        ],
+        "counterparty": "ООО «КомЛинк Дзета»",
+        "issue_date": "2026-04-29",
+        "service_period": null,
+        "amount": "650000.00",
+        "allocations": [
+          {
+            "line_label": null,
+            "category": "administrative_overhead",
+            "amount": "650000.00"
+          }
+        ]
+      }
+    },
+    {
+      "file": "13_УПД_УПР-55.pdf",
+      "format": "pdf",
+      "fixture": "upr55",
+      "scan": false,
+      "expected_status": "accepted",
+      "expected": {
+        "doc_type": "УПД",
+        "number": "УПР-55",
+        "contracts": [
+          "24/03/15-01"
+        ],
+        "counterparty": "ООО «ОргКонтур Эта»",
+        "issue_date": "2026-05-29",
+        "service_period": null,
+        "amount": "744000.00",
+        "allocations": [
+          {
+            "line_label": null,
+            "category": "administrative_overhead",
+            "amount": "744000.00"
+          }
+        ]
+      }
+    },
+    {
+      "file": "14_Акт_ОРГ-0603.pdf",
+      "format": "pdf",
+      "fixture": "org0603",
+      "scan": false,
+      "expected_status": "excluded",
+      "expected_exclusion_reason": "outside_period",
+      "expected": {
+        "doc_type": "Акт",
+        "number": "ОРГ-0603",
+        "contracts": [
+          "24/03/15-01"
+        ],
+        "counterparty": "ООО «ОргКонтур Эта»",
+        "issue_date": "2026-06-03",
+        "service_period": {
+          "from": "2026-06-01",
+          "to": "2026-06-30"
+        },
+        "amount": "165000.00",
+        "allocations": [
+          {
+            "line_label": null,
+            "category": "administrative_overhead",
+            "amount": "165000.00"
+          }
+        ]
+      }
+    },
+    {
+      "file": "15_Акт_ADM-75_15-05-2026.pdf",
+      "format": "pdf",
+      "fixture": "adm75",
+      "scan": true,
+      "expected_status": "excluded",
+      "expected_exclusion_reason": "other_contract",
+      "expected": {
+        "doc_type": "Акт",
+        "number": "ADM-75",
+        "contracts": [
+          "24/03/16-02"
+        ],
+        "counterparty": "ООО «ДокКонтур Эпсилон»",
+        "issue_date": "2026-05-15",
+        "service_period": null,
+        "amount": "98000.00",
+        "allocations": [
+          {
+            "line_label": null,
+            "category": "administrative_overhead",
+            "amount": "98000.00"
+          }
+        ]
+      }
+    }
+  ],
+  "context": [
+    {
+      "file": "00_README_набор_данных.txt",
+      "format": "txt"
+    },
+    {
+      "file": "00_README_набор_данных.docx",
+      "format": "docx"
+    }
+  ]
+}

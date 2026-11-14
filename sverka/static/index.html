@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ревизор — ИИ-агент сверки отчетов о затратах</title>
+<link rel="stylesheet" href="/static/styles.css">
+<script src="/static/app.js" defer></script>
+</head>
+<body>
+<!-- T09 chat and evidence interface. All data comes from /api; no model calls or credentials in the browser. -->
+<a class="skip" href="#timeline">Перейти к разговору</a>
+<div id="announcer" class="visually-hidden" aria-live="polite"></div>
+
+<div class="layout">
+  <aside id="sidebar" class="sidebar" aria-label="Сверки">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 20 20" focusable="false"><path d="M3.5 10.8 C5.3 12.2 6.6 13.7 7.7 15.6 C9.9 10.6 12.9 6.6 16.8 3.8"/></svg>
+      </span>
+      <div class="brand-text">
+        <p class="brand-name">Ревизор</p>
+        <p class="brand-tag">ИИ-агент сверки отчетов о затратах</p>
+      </div>
+      <button type="button" id="side-hide" class="icon-btn" aria-controls="sidebar" aria-label="Скрыть список сверок" title="Скрыть список сверок">
+        <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M12.5 4.5 L7 10 L12.5 15.5"/></svg>
+      </button>
+    </div>
+    <button type="button" id="ws-new" class="new-btn">Новая сверка</button>
+    <nav id="ws-history" class="history" aria-label="Сохраненные сверки"></nav>
+    <div id="mode-banner" class="mode-note" role="status"></div>
+  </aside>
+  <div id="side-splitter" class="splitter" role="separator" aria-orientation="vertical" aria-controls="sidebar" aria-label="Ширина списка сверок" tabindex="0"></div>
+
+  <main class="chat" aria-labelledby="app-title">
+    <h1 id="app-title" class="visually-hidden">Ревизор — ИИ-агент сверки отчетов о затратах</h1>
+    <header class="chat-head">
+      <button type="button" id="side-show" class="icon-btn" aria-controls="sidebar" aria-expanded="true" aria-label="Список сверок" title="Список сверок">
+        <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M3.5 5.5 H16.5 M3.5 10 H16.5 M3.5 14.5 H16.5"/></svg>
+      </button>
+      <div id="ws-status" class="ws-status"></div>
+      <div class="chat-tools">
+        <button type="button" id="setup-toggle" class="tool-btn" aria-expanded="true" aria-controls="setup-panel">Документы</button>
+        <button type="button" id="evidence-toggle" class="tool-btn" aria-expanded="false" aria-controls="evidence" hidden>Фрагмент</button>
+        <button type="button" id="ws-copy" class="icon-btn" aria-label="Скопировать ссылку на эту сверку" title="Скопировать ссылку на эту сверку">
+          <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M8.5 11.5 a3 3 0 0 0 4.2 0 l2.6 -2.6 a3 3 0 0 0 -4.2 -4.2 l-1 1 M11.5 8.5 a3 3 0 0 0 -4.2 0 l-2.6 2.6 a3 3 0 0 0 4.2 4.2 l1 -1"/></svg>
+        </button>
+        <span id="ws-copy-status" class="copy-status" role="status"></span>
+      </div>
+    </header>
+
+    <section id="setup-panel" class="setup-panel" aria-label="Документы и параметры сверки">
+      <div class="setup-grid">
+        <section class="panel" aria-labelledby="docs-title">
+          <h2 id="docs-title"><span class="step" aria-hidden="true">1</span> Документы</h2>
+          <p class="hint">Отчет загрузите отдельно. Акты, ведомости и справки добавьте к первичным документам — по одному или zip-архивом.</p>
+          <form class="upload" data-role="report">
+            <input type="file" id="up-report" class="file-input" accept=".pdf,.png,.jpg,.jpeg,.tif,.tiff,.docx,.xlsx">
+            <label class="drop" for="up-report">
+              <span class="drop-title">Итоговый отчет (КФЗ)</span>
+              <span class="drop-hint">Перетащите один файл сюда или нажмите, чтобы выбрать</span>
+              <span class="drop-files"></span>
+            </label>
+            <button type="submit">Загрузить отчет</button>
+            <div class="upload-status" role="status"></div>
+          </form>
+          <form class="upload" data-role="primary">
+            <input type="file" id="up-primary" class="file-input" multiple>
+            <label class="drop" for="up-primary">
+              <span class="drop-title">Первичные документы</span>
+              <span class="drop-hint">Файлы или zip-архив: акты, ведомости, справки</span>
+              <span class="drop-files"></span>
+            </label>
+            <button type="submit">Загрузить первичные</button>
+            <div class="upload-status" role="status"></div>
+          </form>
+          <form class="upload" data-role="context">
+            <input type="file" id="up-context" class="file-input" multiple>
+            <label class="drop" for="up-context">
+              <span class="drop-title">Справочные документы</span>
+              <span class="drop-hint">Необязательно: описание набора, договор</span>
+              <span class="drop-files"></span>
+            </label>
+            <button type="submit">Загрузить справочные</button>
+            <div class="upload-status" role="status"></div>
+          </form>
+          <div id="doc-list"></div>
+        </section>
+
+        <section class="panel" aria-labelledby="scope-title">
+          <h2 id="scope-title"><span class="step" aria-hidden="true">2</span> Параметры проверки</h2>
+          <form id="scope-form" novalidate>
+            <label for="scope-contract">Договор</label>
+            <input id="scope-contract" name="contract" autocomplete="off" placeholder="например, 24/03/15-01">
+            <label for="scope-row">Строка отчета</label>
+            <input id="scope-row" name="report_row" autocomplete="off" placeholder="например, 3 этап, 2026 г.">
+            <div class="two">
+              <div>
+                <label for="scope-from">Начало периода</label>
+                <input id="scope-from" name="date_from" type="date">
+              </div>
+              <div>
+                <label for="scope-to">Конец периода</label>
+                <input id="scope-to" name="date_to" type="date">
+              </div>
+            </div>
+            <p class="hint">Проверяется только загруженный набор документов.</p>
+            <div id="scope-summary" class="summary"></div>
+            <label class="check">
+              <input type="checkbox" id="scope-confirm">
+              <span>Подтверждаю отчет, договор, строку отчета и период</span>
+            </label>
+            <button type="submit" id="run-start" class="primary" aria-describedby="run-blockers">Запустить проверку</button>
+            <ul id="run-blockers" class="blockers"></ul>
+            <div id="run-start-status" role="status"></div>
+          </form>
+        </section>
+      </div>
+    </section>
+
+    <div id="timeline" class="timeline" tabindex="-1" aria-label="Разговор и результаты проверок"></div>
+    <form id="composer" class="composer">
+      <div class="composer-box">
+        <div class="composer-target">
+          <label for="followup-run" class="target-label">Вопрос о</label>
+          <select id="followup-run"></select>
+          <span id="followup-single" class="target-single"></span>
+        </div>
+        <div class="composer-row">
+          <label for="composer-text" class="visually-hidden">Вопрос</label>
+          <textarea id="composer-text" rows="1" placeholder="Спросите о результате проверки"></textarea>
+          <button type="submit" id="composer-send" class="send-btn" aria-label="Отправить вопрос" title="Отправить (Enter)">
+            <svg viewBox="0 0 20 20" aria-hidden="true" focusable="false"><path d="M10 15.5 V4.5 M5.5 9 L10 4.5 L14.5 9"/></svg>
+          </button>
+        </div>
+      </div>
+      <p id="composer-status" class="composer-hint" role="status"></p>
+    </form>
+  </main>
+
+  <div id="ev-splitter" class="splitter" role="separator" aria-orientation="vertical" aria-controls="evidence" aria-label="Ширина панели фрагмента" tabindex="0"></div>
+  <aside id="evidence" class="evidence" aria-labelledby="evidence-title">
+    <div class="evidence-head">
+      <h2 id="evidence-title">Фрагмент из документа</h2>
+      <button type="button" id="evidence-close" class="tool-btn" aria-label="Скрыть панель фрагмента">Скрыть</button>
+    </div>
+    <div id="evidence-body" class="evidence-body" tabindex="-1"></div>
+  </aside>
+</div>
+</body>
+</html>

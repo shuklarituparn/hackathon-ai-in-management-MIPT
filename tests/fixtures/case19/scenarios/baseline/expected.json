@@ -1,0 +1,99 @@
+{
+  "description": "The supplied bundle as is (V01).",
+  "validation": [
+    "V01"
+  ],
+  "inputs": {},
+  "typed": "recon_fixtures.items()",
+  "expected": {
+    "status_counts": {
+      "verified": 5,
+      "discrepancy": 2,
+      "insufficient_evidence": 8
+    },
+    "indicators": {
+      "col4": {
+        "status": "verified",
+        "problem": null,
+        "coverage": "complete",
+        "observed_sum": "0.00",
+        "expected_value": "0.00",
+        "diff": "0.00"
+      },
+      "col5": {
+        "status": "verified",
+        "problem": null,
+        "coverage": "complete",
+        "observed_sum": "5558474.83",
+        "expected_value": "5558474.83",
+        "diff": "0.00"
+      },
+      "col10": {
+        "status": "verified",
+        "problem": null,
+        "coverage": "complete",
+        "observed_sum": "1671359.96",
+        "expected_value": "1671359.96",
+        "diff": "0.00"
+      },
+      "col15": {
+        "status": "discrepancy",
+        "problem": "amount_mismatch",
+        "coverage": "complete",
+        "observed_sum": "1133298.10",
+        "expected_value": "1133298.10",
+        "diff": "12500.00"
+      },
+      "col16": {
+        "status": "verified",
+        "problem": null,
+        "coverage": "complete",
+        "observed_sum": "3204744.51",
+        "expected_value": "3204744.51",
+        "diff": "0.00"
+      },
+      "col17": {
+        "status": "discrepancy",
+        "problem": "amount_mismatch",
+        "coverage": "complete",
+        "observed_sum": "11567877.40",
+        "expected_value": "11567877.40",
+        "diff": "12500.00"
+      }
+    },
+    "exclusions": [
+      {
+        "fixture": "adm27copy",
+        "reason": "duplicate",
+        "duplicate_of": "adm27"
+      },
+      {
+        "fixture": "org0603",
+        "reason": "outside_period"
+      },
+      {
+        "fixture": "adm75",
+        "reason": "other_contract"
+      }
+    ],
+    "unresolved": [],
+    "conclusion": {
+      "component_discrepancies": [
+        {
+          "entry_id": "col15",
+          "diff": "12500.00",
+          "problem": "amount_mismatch"
+        }
+      ],
+      "grand_total": {
+        "entry_id": "col17",
+        "status": "discrepancy",
+        "diff": "12500.00",
+        "explained_by": [
+          "col15"
+        ],
+        "unexplained_diff": "0.00"
+      }
+    }
+  }
+}

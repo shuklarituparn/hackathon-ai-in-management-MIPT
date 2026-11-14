@@ -1,0 +1,58 @@
+services:
+  sverka:
+    build: .
+    image: sverka-kfz:1.0
+    container_name: sverka-kfz
+    ports:
+      - "${SVERKA_PORT:-8000}:8000"
+    environment:
+      SVERKA_TOLERANCE: "${SVERKA_TOLERANCE:-0.01}"
+      SVERKA_OCR_LANG: "${SVERKA_OCR_LANG:-rus+eng}"
+      SVERKA_OCR_DPI: "${SVERKA_OCR_DPI:-300}"
+      SVERKA_UNREADABLE_BLOCKS: "${SVERKA_UNREADABLE_BLOCKS:-1}"
+      SVERKA_CLASSIFY_MIN_CONF: "${SVERKA_CLASSIFY_MIN_CONF:-0.34}"
+      SVERKA_MAX_UPLOAD_MB: "${SVERKA_MAX_UPLOAD_MB:-200}"
+      SVERKA_MAX_ARCHIVE_FILES: "${SVERKA_MAX_ARCHIVE_FILES:-500}"
+      SVERKA_MAX_ARCHIVE_MB: "${SVERKA_MAX_ARCHIVE_MB:-300}"
+      SVERKA_RUN_MODE: "${SVERKA_RUN_MODE:-live}"
+      # Модель для полной проверки (docs/harness.md). Ключ задается в .env и остается на сервере.
+      SVERKA_PROVIDER_NAME: "${SVERKA_PROVIDER_NAME:-}"
+      SVERKA_PROVIDER_BASE_URL: "${SVERKA_PROVIDER_BASE_URL:-}"
+      SVERKA_PROVIDER_MODEL: "${SVERKA_PROVIDER_MODEL:-}"
+      SVERKA_PROVIDER_API_KEY: "${SVERKA_PROVIDER_API_KEY:-}"
+      SVERKA_PROVIDER_AUTH: "${SVERKA_PROVIDER_AUTH:-}"
+      SVERKA_PROVIDER_TIMEOUT: "${SVERKA_PROVIDER_TIMEOUT:-}"
+      SVERKA_PROVIDER_MAX_OUTPUT_TOKENS: "${SVERKA_PROVIDER_MAX_OUTPUT_TOKENS:-}"
+      SVERKA_PROVIDER_MAX_TOKENS_FIELD: "${SVERKA_PROVIDER_MAX_TOKENS_FIELD:-}"
+      SVERKA_PROVIDER_THINKING: "${SVERKA_PROVIDER_THINKING:-}"
+      # Пустое значение (SVERKA_PROVIDER_TEMPERATURE=) отключает передачу температуры.
+      SVERKA_PROVIDER_TEMPERATURE: "${SVERKA_PROVIDER_TEMPERATURE-0}"
+      # Лимиты проверки (docs/harness.md). Пустое значение оставляет значение по умолчанию.
+      SVERKA_HARNESS_DOC_MAX_REQUESTS: "${SVERKA_HARNESS_DOC_MAX_REQUESTS:-}"
+      SVERKA_HARNESS_DOC_MAX_TOOL_CALLS: "${SVERKA_HARNESS_DOC_MAX_TOOL_CALLS:-}"
+      SVERKA_HARNESS_DOC_MAX_SECONDS: "${SVERKA_HARNESS_DOC_MAX_SECONDS:-}"
+      SVERKA_HARNESS_RUN_MAX_REQUESTS: "${SVERKA_HARNESS_RUN_MAX_REQUESTS:-}"
+      SVERKA_HARNESS_RUN_MAX_TOOL_CALLS: "${SVERKA_HARNESS_RUN_MAX_TOOL_CALLS:-}"
+      SVERKA_HARNESS_RUN_MAX_SECONDS: "${SVERKA_HARNESS_RUN_MAX_SECONDS:-}"
+      SVERKA_HARNESS_REQUEST_SECONDS: "${SVERKA_HARNESS_REQUEST_SECONDS:-}"
+      SVERKA_HARNESS_PROVIDER_RETRIES: "${SVERKA_HARNESS_PROVIDER_RETRIES:-}"
+      SVERKA_HARNESS_MAX_REINSPECTION_ROUNDS: "${SVERKA_HARNESS_MAX_REINSPECTION_ROUNDS:-}"
+      SVERKA_LLM_URL: "${SVERKA_LLM_URL:-}"
+      SVERKA_LLM_MODEL: "${SVERKA_LLM_MODEL:-qwen2.5:7b-instruct}"
+      SVERKA_LLM_TIMEOUT: "${SVERKA_LLM_TIMEOUT:-60}"
+    volumes:
+      - ./data:/data      # загруженные наборы и результаты веб-интерфейса
+      - ./out:/out        # результаты запуска из командной строки
+    restart: unless-stopped
+
+  # Необязательная локальная LLM для неоднозначной классификации документов.
+  # Запуск: docker compose --profile llm up -d, затем SVERKA_LLM_URL=http://ollama:11434/v1 в .env
+  ollama:
+    image: ollama/ollama:latest
+    profiles: ["llm"]
+    volumes:
+      - ollama:/root/.ollama
+    restart: unless-stopped
+
+volumes:
+  ollama:

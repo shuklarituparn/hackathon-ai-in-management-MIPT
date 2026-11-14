@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3600" height="2680" viewBox="0 0 3600 2680" role="img" aria-labelledby="title desc">
+<title id="title">Architecture of financial report verification</title>
+<desc id="desc">An agent always interprets reports and supporting documents using OCR, layout and native evidence. Validation can request bounded reinspection. Deterministic code checks eligibility and completeness, calculates results, and preserves evidence. A local Docker application calls a configurable hosted model API and stores versioned runs in a persistent volume.</desc>
+<defs>
+<marker id="end-23755B" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="11" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#23755B"/></marker>
+<marker id="start-23755B" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="11" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto"><path d="M 10 0 L 0 5 L 10 10 z" fill="#23755B"/></marker>
+<marker id="end-7256B8" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="11" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#7256B8"/></marker>
+<marker id="start-7256B8" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="11" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto"><path d="M 10 0 L 0 5 L 10 10 z" fill="#7256B8"/></marker>
+<marker id="end-8190A5" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="11" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#8190A5"/></marker>
+<marker id="start-8190A5" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="11" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto"><path d="M 10 0 L 0 5 L 10 10 z" fill="#8190A5"/></marker>
+<marker id="end-D6DEEA" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="11" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" fill="#D6DEEA"/></marker>
+<marker id="start-D6DEEA" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="11" markerHeight="11" markerUnits="userSpaceOnUse" orient="auto"><path d="M 10 0 L 0 5 L 10 10 z" fill="#D6DEEA"/></marker>
+</defs>
+<rect x="0" y="0" width="3600" height="2680" rx="0" fill="#F8FAFD"/>
+<text x="100" y="125.12" font-family="Arial, sans-serif" font-size="68" font-weight="700" fill="#17263D">Financial report verification</text>
+<text x="103" y="186.88" font-family="Arial, sans-serif" font-size="32" font-weight="400" fill="#53647A">Architecture as built: agent-led extraction, source evidence, deterministic reconciliation</text>
+<rect x="3090" y="75" width="410" height="58" rx="29" fill="#E9EDF5"/>
+<text x="3120" y="110.68" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#17263D">AS BUILT  /  v1.0</text>
+<polyline points="104,237 182,237" fill="none" stroke="#8190A5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#end-8190A5)"/>
+<text x="200" y="241.00" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#53647A">Data flow</text>
+<polyline points="460,237 538,237" fill="none" stroke="#7256B8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10" marker-end="url(#end-7256B8)"/>
+<text x="556" y="241.00" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#53647A">API calls / bounded retry</text>
+<text x="2350" y="241.00" font-family="Arial, sans-serif" font-size="25" font-weight="700" fill="#7256B8">Both the report and primary documents use the agent</text>
+<rect x="140" y="320" width="880" height="180" rx="22" fill="#FFFFFF" stroke="#D6DEEA" stroke-width="2"/>
+<rect x="140" y="320" width="9" height="180" rx="3" fill="#3465B4"/>
+<text x="174" y="375.40" font-family="Arial, sans-serif" font-size="35" font-weight="700" fill="#17263D">Browser workspace</text>
+<text x="174" y="437.68" font-family="Arial, sans-serif" font-size="27" font-weight="400" fill="#53647A">Chat + uploads + report scope</text>
+<text x="174" y="479.68" font-family="Arial, sans-serif" font-size="27" font-weight="400" fill="#53647A">Rich results in chat + evidence viewer</text>
+<rect x="1360" y="320" width="880" height="180" rx="22" fill="#1D304E" stroke="#1D304E" stroke-width="2"/>
+<rect x="1360" y="320" width="9" height="180" rx="3" fill="#1D304E"/>
+<text x="1394" y="375.40" font-family="Arial, sans-serif" font-size="35" font-weight="700" fill="#FFFFFF">Local backend / agent harness</text>
+<text x="1394" y="437.68" font-family="Arial, sans-serif" font-size="27" font-weight="400" fill="#E9EFF9">Tools + skills + saved session state</text>
+<text x="1394" y="479.68" font-family="Arial, sans-serif" font-size="27" font-weight="400" fill="#E9EFF9">Bounded loop, progress, cancellation</text>
+<rect x="2580" y="320" width="880" height="180" rx="22" fill="#F1EEFA" stroke="#D6DEEA" stroke-width="2"/>
+<rect x="2580" y="320" width="9" height="180" rx="3" fill="#7256B8"/>
+<text x="2614" y="375.40" font-family="Arial, sans-serif" font-size="35" font-weight="700" fill="#17263D">External model API</text>
+<text x="2614" y="437.68" font-family="Arial, sans-serif" font-size="27" font-weight="400" fill="#53647A">Access through backend provider adapters</text>
+<text x="2614" y="479.68" font-family="Arial, sans-serif" font-size="27" font-weight="400" fill="#53647A">Provider and model are configuration</text>
+<polyline points="1020,410 1342,410" fill="none" stroke="#8190A5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#end-8190A5)" marker-start="url(#start-8190A5)"/>
+<text x="1080" y="385.16" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#53647A">messages / results</text>
+<polyline points="2240,410 2562,410" fill="none" stroke="#7256B8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10" marker-end="url(#end-7256B8)" marker-start="url(#start-7256B8)"/>
+<text x="2290" y="385.16" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#7256B8">requests / outputs</text>
+<polyline points="1800,500 1800,590 580,590 580,632" fill="none" stroke="#8190A5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#end-8190A5)"/>
+<text x="825" y="561.84" font-family="Arial, sans-serif" font-size="26" font-weight="400" fill="#53647A">start / resume a workspace run</text>
+<rect x="140" y="650" width="880" height="330" rx="22" fill="#FFFFFF" stroke="#D6DEEA" stroke-width="2"/>
+<rect x="140" y="650" width="9" height="330" rx="3" fill="#3465B4"/>
+<rect x="170" y="675" width="48" height="48" rx="24" fill="#3465B4"/>
+<text x="185" y="705.04" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#FFFFFF">1</text>
+<text x="238" y="705.40" font-family="Arial, sans-serif" font-size="35" font-weight="700" fill="#17263D">Ingest &amp; version</text>
+<text x="174" y="768.52" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#53647A">Report + primary documents</text>
+<text x="174" y="810.52" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#53647A">PDF / PNG / DOCX / XLSX</text>
+<text x="174" y="852.52" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#53647A">Immutable originals + SHA-256 versions</text>
+<text x="174" y="894.52" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#53647A">Scope: contract, period, report row</text>
+<text x="174" y="936.52" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#53647A">Document roles and upload manifest</text>
+<rect x="1360" y="650" width="880" height="330" rx="22" fill="#EDF4FD" stroke="#D6DEEA" stroke-width="2"/>
+<rect x="1360" y="650" width="9" height="330" rx="3" fill="#3465B4"/>
+<rect x="1390" y="675" width="48" height="48" rx="24" fill="#3465B4"/>
+<text x="1405" y="705.04" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#FFFFFF">2</text>
+<text x="1458" y="705.40" font-family="Arial, sans-serif" font-size="35" font-weight="700" fill="#17263D">Read &amp; index evidence</text>
+<text x="1394" y="768.52" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#53647A">OCR/layout + page images for PDF/PNG</text>
+<text x="1394" y="810.52" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#53647A">Native cells/tables and text for XLSX/DOCX</text>
+<text x="1394" y="852.52" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#53647A">Block IDs + text + source coordinates</text>
+<text x="1394" y="894.52" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#53647A">Page/region, sheet/cell, paragraph/table</text>
+<text x="1394" y="936.52" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#53647A">Preserve rotation and crop transforms</text>
+<rect x="2580" y="650" width="880" height="330" rx="22" fill="#F0ECFA" stroke="#D6DEEA" stroke-width="2"/>
+<rect x="2580" y="650" width="9" height="330" rx="3" fill="#7256B8"/>
+<rect x="2610" y="675" width="48" height="48" rx="24" fill="#7256B8"/>
+<text x="2625" y="705.04" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#FFFFFF">3</text>
+<text x="2678" y="704.56" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#17263D">Extraction agent: PRIMARY</text>
+<text x="2614" y="768.52" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#53647A">Always interpret report + primary documents</text>
+<text x="2614" y="810.52" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#53647A">Extract facts, categories and service periods</text>
+<text x="2614" y="852.52" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#53647A">Attach evidence IDs to each claim</text>
+<text x="2614" y="894.52" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#53647A">Tools: page, crop, re-OCR, native cells</text>
+<text x="2614" y="936.52" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#53647A">Keep observations separate from inference</text>
+<polyline points="1020,815 1342,815" fill="none" stroke="#8190A5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#end-8190A5)"/>
+<text x="1110" y="791.00" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#53647A">originals</text>
+<polyline points="2240,815 2562,815" fill="none" stroke="#8190A5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#end-8190A5)"/>
+<text x="2290" y="791.00" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#53647A">evidence blocks</text>
+<rect x="2580" y="1170" width="880" height="330" rx="22" fill="#FFF8EC" stroke="#D6DEEA" stroke-width="2"/>
+<rect x="2580" y="1170" width="9" height="330" rx="3" fill="#A66C1E"/>
+<rect x="2610" y="1195" width="48" height="48" rx="24" fill="#A66C1E"/>
+<text x="2625" y="1225.04" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#FFFFFF">4</text>
+<text x="2678" y="1225.40" font-family="Arial, sans-serif" font-size="35" font-weight="700" fill="#17263D">Validate &amp; resolve</text>
+<text x="2614" y="1288.52" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#53647A">Check schema, references and transcription</text>
+<text x="2614" y="1330.52" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#53647A">Find contradictions and missing fields</text>
+<text x="2614" y="1372.52" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#53647A">Reinspect with bounded retries</text>
+<text x="2614" y="1414.52" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#53647A">Unresolved -&gt; explicit review state</text>
+<text x="2614" y="1456.52" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#53647A">Original reported values stay unchanged</text>
+<rect x="1360" y="1170" width="880" height="330" rx="22" fill="#ECF6F1" stroke="#D6DEEA" stroke-width="2"/>
+<rect x="1360" y="1170" width="9" height="330" rx="3" fill="#23755B"/>
+<rect x="1390" y="1195" width="48" height="48" rx="24" fill="#23755B"/>
+<text x="1405" y="1225.04" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#FFFFFF">5</text>
+<text x="1458" y="1225.40" font-family="Arial, sans-serif" font-size="35" font-weight="700" fill="#17263D">Reconcile in code</text>
+<text x="1394" y="1288.52" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#53647A">Apply contract, period and duplicate policies</text>
+<text x="1394" y="1330.52" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#53647A">Check coverage, units, signs and rounding</text>
+<text x="1394" y="1372.52" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#53647A">Aggregate Decimal amounts independently</text>
+<text x="1394" y="1414.52" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#53647A">Compare report and expected values</text>
+<text x="1394" y="1456.52" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#53647A">Matching sums do not prove completeness</text>
+<rect x="140" y="1170" width="880" height="330" rx="22" fill="#FFFFFF" stroke="#D6DEEA" stroke-width="2"/>
+<rect x="140" y="1170" width="9" height="330" rx="3" fill="#3465B4"/>
+<rect x="170" y="1195" width="48" height="48" rx="24" fill="#3465B4"/>
+<text x="185" y="1225.04" font-family="Arial, sans-serif" font-size="31" font-weight="700" fill="#FFFFFF">6</text>
+<text x="238" y="1225.40" font-family="Arial, sans-serif" font-size="35" font-weight="700" fill="#17263D">Results in chat</text>
+<text x="174" y="1288.52" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#53647A">Every indicator: verified / discrepancy /</text>
+<text x="174" y="1330.52" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#53647A">insufficient evidence</text>
+<text x="174" y="1372.52" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#53647A">Saved rich chat result + linked source evidence</text>
+<text x="174" y="1414.52" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#53647A">Values, delta, formula, sources, exclusions</text>
+<text x="174" y="1456.52" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#53647A">Follow-up questions about the saved result</text>
+<polyline points="2790,980 2790,1152" fill="none" stroke="#8190A5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#end-8190A5)"/>
+<text x="2580" y="1059.00" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#53647A">proposed facts</text>
+<text x="2660" y="1095.00" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#53647A">+ refs</text>
+<polyline points="3270,1170 3270,998" fill="none" stroke="#7256B8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10" marker-end="url(#end-7256B8)"/>
+<text x="3070" y="1074.00" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#7256B8">crop / re-read</text>
+<polyline points="2580,1335 2258,1335" fill="none" stroke="#8190A5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#end-8190A5)"/>
+<text x="2272" y="1311.00" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#53647A">facts + open issues</text>
+<polyline points="1360,1335 1038,1335" fill="none" stroke="#8190A5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#end-8190A5)"/>
+<text x="1115" y="1311.00" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#53647A">findings</text>
+<polyline points="140,1335 100,1335 100,410 122,410" fill="none" stroke="#8190A5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#end-8190A5)"/>
+<text x="140" y="1573.52" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#53647A">Every stage saves versioned artifacts. A replaced or added document starts a new full run; earlier runs stay readable.</text>
+<rect x="100" y="1680" width="3400" height="720" rx="26" fill="#EEF2F8" stroke="#D6DEEA" stroke-width="2"/>
+<text x="140" y="1747.92" font-family="Arial, sans-serif" font-size="38" font-weight="700" fill="#17263D">DEPLOYMENT &amp; REPRODUCIBILITY</text>
+<text x="140" y="1798.52" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#53647A">Local first. One application container; the hosted model API is the only external dependency at run time.</text>
+<rect x="140" y="1870" width="660" height="210" rx="22" fill="#FFFFFF" stroke="#D6DEEA" stroke-width="2"/>
+<rect x="140" y="1870" width="9" height="210" rx="3" fill="#3465B4"/>
+<text x="174" y="1925.40" font-family="Arial, sans-serif" font-size="35" font-weight="700" fill="#17263D">Browser</text>
+<text x="174" y="1987.68" font-family="Arial, sans-serif" font-size="27" font-weight="400" fill="#53647A">Chat + uploads</text>
+<text x="174" y="2029.68" font-family="Arial, sans-serif" font-size="27" font-weight="400" fill="#53647A">Results in chat + evidence viewer</text>
+<rect x="1040" y="1850" width="1260" height="480" rx="22" fill="#FFFFFF" stroke="#607997" stroke-width="3"/>
+<text x="1080" y="1911.08" font-family="Arial, sans-serif" font-size="37" font-weight="700" fill="#17263D">One local app container (Docker)</text>
+<text x="1080" y="1974.36" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#53647A">UI/API + harness + document tools</text>
+<text x="1080" y="2016.36" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#53647A">Validation + reconciliation</text>
+<text x="1080" y="2058.36" font-family="Arial, sans-serif" font-size="29" font-weight="400" fill="#53647A">Workspace-scoped sessions and runs</text>
+<polyline points="1080,2094 2260,2094" fill="none" stroke="#D6DEEA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1080" y="2145.52" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#53647A">Config and credentials: environment variables</text>
+<text x="1080" y="2187.52" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#53647A">Dependencies and skill/tool versions pinned</text>
+<text x="1080" y="2229.52" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#53647A">API keys remain in the backend</text>
+<text x="1080" y="2271.52" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#53647A">Later hosting requires access control</text>
+<rect x="2540" y="1850" width="920" height="200" rx="22" fill="#F1EEFA" stroke="#D6DEEA" stroke-width="2"/>
+<rect x="2540" y="1850" width="9" height="200" rx="3" fill="#7256B8"/>
+<text x="2574" y="1903.72" font-family="Arial, sans-serif" font-size="33" font-weight="700" fill="#17263D">External API (configurable)</text>
+<text x="2574" y="1967.68" font-family="Arial, sans-serif" font-size="27" font-weight="400" fill="#53647A">OpenAI-compatible model API; OCR runs locally</text>
+<text x="2574" y="2009.68" font-family="Arial, sans-serif" font-size="27" font-weight="400" fill="#53647A">Called through backend provider adapters</text>
+<rect x="2540" y="2130" width="920" height="220" rx="22" fill="#ECF6F1" stroke="#D6DEEA" stroke-width="2"/>
+<rect x="2540" y="2130" width="9" height="220" rx="3" fill="#23755B"/>
+<text x="2574" y="2183.72" font-family="Arial, sans-serif" font-size="33" font-weight="700" fill="#17263D">Persistent volume: /data</text>
+<text x="2574" y="2247.68" font-family="Arial, sans-serif" font-size="27" font-weight="400" fill="#53647A">Originals, pages, evidence, facts and results</text>
+<text x="2574" y="2289.68" font-family="Arial, sans-serif" font-size="27" font-weight="400" fill="#53647A">Sessions, revisions and run manifests</text>
+<text x="2574" y="2331.68" font-family="Arial, sans-serif" font-size="27" font-weight="400" fill="#53647A">Files + SQLite; separate workspace IDs</text>
+<polyline points="800,1975 1022,1975" fill="none" stroke="#8190A5" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#end-8190A5)" marker-start="url(#start-8190A5)"/>
+<text x="855" y="1949.16" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#53647A">HTTP / events</text>
+<polyline points="2300,1950 2522,1950" fill="none" stroke="#7256B8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 10" marker-end="url(#end-7256B8)" marker-start="url(#start-7256B8)"/>
+<text x="2330" y="1925.16" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#7256B8">API calls</text>
+<polyline points="2300,2240 2522,2240" fill="none" stroke="#23755B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#end-23755B)" marker-start="url(#start-23755B)"/>
+<text x="2330" y="2215.16" font-family="Arial, sans-serif" font-size="24" font-weight="400" fill="#23755B">read / write</text>
+<rect x="100" y="2440" width="3400" height="142" rx="20" fill="#E5EBF5"/>
+<text x="140" y="2488.20" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#17263D">Replayable runs</text>
+<text x="550" y="2489.52" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#17263D">Input hashes + app/tool/skill versions + model/settings in the run; model calls traced in /data.</text>
+<text x="140" y="2538.52" font-family="Arial, sans-serif" font-size="28" font-weight="400" fill="#53647A">Saved facts reproduce the calculation; fresh model responses can vary.</text>
+<text x="104" y="2631.00" font-family="Arial, sans-serif" font-size="25" font-weight="400" fill="#53647A">Architecture v1.0 as built  |  14 Nov 2026</text>
+</svg>

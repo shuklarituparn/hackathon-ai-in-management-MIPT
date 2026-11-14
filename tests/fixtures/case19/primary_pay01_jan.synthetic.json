@@ -1,0 +1,172 @@
+{
+  "kind": "primary",
+  "version_id": "ver_pay01_v1",
+  "doc_type": {
+    "state": "accepted",
+    "value": "Расчетная ведомость",
+    "source_text": "РАСЧЕТНАЯ ВЕДОМОСТЬ ПО ОПЛАТЕ ТРУДА",
+    "evidence_ids": [
+      "blk_pay01_title"
+    ],
+    "basis": "observed",
+    "findings": [],
+    "reason": null
+  },
+  "number": {
+    "state": "accepted",
+    "value": "ВЕД-ЗП-2026-01",
+    "source_text": "Документ: ВЕД-ЗП-2026-01",
+    "evidence_ids": [
+      "blk_pay01_number"
+    ],
+    "basis": "observed",
+    "findings": [],
+    "reason": null
+  },
+  "contracts": {
+    "state": "accepted",
+    "value": [
+      "24/03/15-01"
+    ],
+    "source_text": "Проект: 24/03/15-01",
+    "evidence_ids": [
+      "blk_pay01_contract"
+    ],
+    "basis": "observed",
+    "findings": [],
+    "reason": null
+  },
+  "counterparty": {
+    "state": "unresolved",
+    "value": null,
+    "source_text": null,
+    "evidence_ids": [],
+    "basis": null,
+    "findings": [],
+    "reason": "Контрагент не указан в ведомости."
+  },
+  "issue_date": {
+    "state": "unresolved",
+    "value": null,
+    "source_text": null,
+    "evidence_ids": [],
+    "basis": null,
+    "findings": [],
+    "reason": "Дата составления в ведомости не указана; указан только период «Январь 2026»."
+  },
+  "service_period": {
+    "state": "accepted",
+    "value": {
+      "start": "2026-01-01",
+      "end": "2026-01-31"
+    },
+    "source_text": "Период: Январь 2026",
+    "evidence_ids": [
+      "blk_pay01_period"
+    ],
+    "basis": "observed",
+    "findings": [],
+    "reason": null
+  },
+  "amount": {
+    "state": "accepted",
+    "value": "1110000.00",
+    "source_text": "=SUM(C6:C7)",
+    "evidence_ids": [
+      "blk_pay01_c8"
+    ],
+    "basis": "inferred",
+    "findings": [],
+    "reason": null
+  },
+  "currency": {
+    "state": "accepted",
+    "value": "RUB",
+    "source_text": "руб.",
+    "evidence_ids": [
+      "blk_pay01_title"
+    ],
+    "basis": "observed",
+    "findings": [],
+    "reason": null
+  },
+  "unit": {
+    "state": "accepted",
+    "value": "руб.",
+    "source_text": "руб.",
+    "evidence_ids": [
+      "blk_pay01_title"
+    ],
+    "basis": "observed",
+    "findings": [],
+    "reason": null
+  },
+  "allocations": [
+    {
+      "line_label": "Основная заработная плата",
+      "category": {
+        "state": "accepted",
+        "value": "payroll_main",
+        "source_text": "Основная заработная плата",
+        "evidence_ids": [
+          "blk_pay01_b6"
+        ],
+        "basis": "observed",
+        "findings": [],
+        "reason": null
+      },
+      "possible_categories": [],
+      "amount": {
+        "state": "accepted",
+        "value": "1010000.00",
+        "source_text": "1010000",
+        "evidence_ids": [
+          "blk_pay01_c6"
+        ],
+        "basis": "observed",
+        "findings": [],
+        "reason": null
+      }
+    },
+    {
+      "line_label": "Дополнительная заработная плата и резерв отпусков",
+      "category": {
+        "state": "accepted",
+        "value": "payroll_total",
+        "source_text": "Дополнительная заработная плата и резерв отпусков",
+        "evidence_ids": [
+          "blk_pay01_b7"
+        ],
+        "basis": "inferred",
+        "findings": [
+          {
+            "code": "combined_line_not_split",
+            "message": "Additional payroll and leave reserve are given as one line; mapped to payroll_additional.",
+            "evidence_ids": [
+              "blk_pay01_b7"
+            ],
+            "version_ids": []
+          }
+        ],
+        "reason": null
+      },
+      "possible_categories": [
+        "payroll_additional",
+        "leave_reserve"
+      ],
+      "amount": {
+        "state": "accepted",
+        "value": "100000.00",
+        "source_text": "100000",
+        "evidence_ids": [
+          "blk_pay01_c7"
+        ],
+        "basis": "observed",
+        "findings": [],
+        "reason": null
+      }
+    }
+  ],
+  "possible_categories": [],
+  "conflicts": []
+}
